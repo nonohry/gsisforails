@@ -35,6 +35,11 @@ group :test do
   gem 'turn', :require => false
 end
 
+group :production do
+  gem 'therubyracer-heroku', '0.8.1.pre3' # you will need this too
+  gem 'pg'
+end
+
 gem 'kaminari'
 gem 'meta_search'
 gem 'to_xls'

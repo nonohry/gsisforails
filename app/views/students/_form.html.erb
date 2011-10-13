@@ -4,7 +4,7 @@
  	<div id="form"> 
 		<fieldset> 
 			<legend>Data Umum</legend>
-				<div id="form-label"><%= f.label :nim %></div> 
+				<div id="form-label"><%= f.label :nim, 'NIM' %></div> 
 				<div id="form-input"><%= f.text_field :nim %></div> 
 				<div id="clear"></div>
 				<div id="form-label">Nama Depan</div> 
@@ -29,7 +29,7 @@
 		<fieldset> 
 			<legend>Data Akademik</legend>
 				<div id="form-label">Tahun Angkatan</div> 
-				<div id="form-input"><%= f.text_field :tahun_masuk %></div> 
+				<div id="form-input"><%= f.select :tahun_masuk, options_for_select(year_collect(Parameter::YEAR))%></div> 
 				<div id="clear"></div>
 				<div id="form-label">Perguruan Tinggi</div> 
 				<div id="form-input"><%= f.select :college_id, options_from_collection_for_select(College.all, :id, :nama) %></div> 

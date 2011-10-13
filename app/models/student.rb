@@ -11,6 +11,7 @@ class Student < ActiveRecord::Base
   belongs_to :active
   
   validates :nim, uniqueness: true
+  validates :nama_depan, presence: true
   
   
   

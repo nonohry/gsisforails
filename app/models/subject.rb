@@ -3,5 +3,6 @@ class Subject < ActiveRecord::Base
   has_one :teaching
   has_many :recaps
   
-  validates :kode, :nama, presence: true
+  validates :kode, presence: true, uniqueness: true
+  validates :nama, presence: true
 end

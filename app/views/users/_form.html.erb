@@ -28,13 +28,13 @@
 		<fieldset> 
 			<legend>Data Akademik</legend>
 				<div id="form-label2">Tahun Angkatan</div> 
-				<div id="form-input"><%= text_field_tag :tahun_masuk %></div> 
+				<div id="form-input"><%= @mahasiswa.tahun_masuk %></div> 
 				<div id="clean"></div>
 				<div id="form-label2">Perguruan Tinggi</div> 
-				<div id="form-input"><%= collection_select(:mahasiswa, :college_id, College.all, :id, :nama) %></div> 
+				<div id="form-input"><%= @mahasiswa.college.nama %></div> 
 				<div id="clean"></div>
 				<div id="form-label2">Program Studi</div> 
-				<div id="form-input"><%= collection_select(:mahasiswa, :course_id, Course.all, :id, :nama) %></div> 
+				<div id="form-input"><%= @mahasiswa.course.nama %></div> 
 				<div id="clean"></div>
 		</fieldset>
 		<fieldset> 
