@@ -1,0 +1,8 @@
+<div id="box-menu"  style="width:920px">Informasi</div>
+<div id="isi">
+	<% Information.all.each do |berita| %>
+		<h1><%= berita.judul %></h2>
+		<p><%= berita.berita %></p>
+		<i>Dibuat tanggal: <%= berita.created_at.strftime("%d %B %Y") %>	</i>
+	<% end %>
+</div>

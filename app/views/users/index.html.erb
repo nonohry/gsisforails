@@ -1,0 +1,22 @@
+<div id="box" class="grid_4">
+	<div id="box-menu"  style="width:280px">KRS</div>
+	<p><%= link_to 'Print KRS', krs_print_path %><br>Print Kartu Rencana Studi</p>   
+</div>
+<div id="box" class="grid_8">
+  <div id="box-menu" style="width:600px;">Pengumuman</div>
+	<p>
+		<b style="color:red">Perhatian!!!</b>
+		<br>Jadwal KRS Online :: KRS Online Tutup sampai tanggal 
+		<b style="color:red"><%= Parameter.last.tanggal_selesai.strftime("%e %B %Y") %></b>
+	</p>
+</div>
+<div class="clear"></div>
+
+<div id="box" class="grid_12">
+<%= render 'informasi' %>
+</div>
+<div class="clear"></div>
+
+
+
+<div id="page"></div>

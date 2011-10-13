@@ -1,0 +1,23 @@
+<h1>Listing guides</h1>
+
+<table>
+  <tr>
+    <th>Dosen</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @guides.each do |guide| %>
+  <tr>
+    <td><%= guide.dosen %></td>
+    <td><%= link_to 'Show', guide %></td>
+    <td><%= link_to 'Edit', edit_guide_path(guide) %></td>
+    <td><%= link_to 'Destroy', guide, confirm: 'Apakah anda yakin?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Guide', new_guide_path %>

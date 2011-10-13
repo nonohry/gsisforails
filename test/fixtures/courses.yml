@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  college: 
+  jenjang: MyString
+  kode: MyString
+  nama: MyString
+  no_sk: MyString
+  akreditasi: MyString
+  no_telp: MyString
+  email: MyString
+  faksmili: MyString
+
+two:
+  college: 
+  jenjang: MyString
+  kode: MyString
+  nama: MyString
+  no_sk: MyString
+  akreditasi: MyString
+  no_telp: MyString
+  email: MyString
+  faksmili: MyString

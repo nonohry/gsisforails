@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  foundation: 
+  kode: MyString
+  nama: MyString
+  no_sk_dikti: MyString
+  alamat_1: MyText
+  alamat_2: MyText
+  kota: MyString
+  kodepos: MyString
+  no_telp: MyString
+  website: MyString
+  email: MyString
+  faksmili: MyString
+
+two:
+  foundation: 
+  kode: MyString
+  nama: MyString
+  no_sk_dikti: MyString
+  alamat_1: MyText
+  alamat_2: MyText
+  kota: MyString
+  kodepos: MyString
+  no_telp: MyString
+  website: MyString
+  email: MyString
+  faksmili: MyString

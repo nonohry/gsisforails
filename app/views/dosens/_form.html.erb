@@ -1,0 +1,69 @@
+<%= form_for(@dosen) do |f| %>
+  <% if @dosen.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@dosen.errors.count, "error") %> prohibited this dosen from being saved:</h2>
+
+      <ul>
+      <% @dosen.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+ 	<div id="form"> 
+	<fieldset> 
+		<legend>Data Umum</legend> 
+			<div id="form-label">NIP Dosen</div> 
+			<div id="form-input"><%= f.text_field :nip %></div> 
+			<div id="clear"></div> 
+			<div id="form-label">Nama</div> 
+			<div id="form-input"><%= f.text_field :nama %></div> 
+			<div id="clear"></div>
+			<div id="form-label">Gelar Depan</div> 
+			<div id="form-input"><%= f.text_field :gelar_depan %></div> 
+			<div id="clear"></div>
+			<div id="form-label">Gelar Belakang</div> 
+			<div id="form-input"><%= f.text_field :gelar_belakang %></div> 
+			<div id="clear"></div>
+			<div id="form-label">Tempat Lahir</div> 
+			<div id="form-input"><%= f.text_field :tempat_lahir %></div> 
+			<div id="clear"></div>
+			<div id="form-label">Tanggal Lahir</div> 
+			<div id="form-input"><%= f.date_select :tanggal_lahir, start_year: Time.now.year - 60, end_year: Time.now.year - 15 %></div> 
+			<div id="clear"></div>
+			<div id="form-label">Agama</div> 
+			<div id="form-input"><%= f.select :religion_id, options_from_collection_for_select(Religion.all, :id, :nama) %></div> 
+			<div id="clear"></div>
+			<div id="form-label">Gender</div> 
+			<div id="form-input"><%= f.select :gender_id, options_from_collection_for_select(Gender.all, :id, :nama) %></div> 
+			<div id="clear"></div>
+			<div id="form-label">Alamat</div> 
+			<div id="form-input"><%= f.text_area :alamat, rows: 5 %></div> 
+			<div id="clear"></div>
+	</fieldset>		
+	<fieldset> 
+		<legend>Telp & email</legend>
+			<div id="form-label">No Telp</div> 
+			<div id="form-input"><%= f.text_field :no_telp %></div> 
+			<div id="clear"></div>
+			<div id="form-label">Email</div> 
+			<div id="form-input"><%= f.text_field :email %></div> 
+			<div id="clear"></div>
+	</fieldset>
+	<fieldset> 
+		<legend>Data Akademik</legend>
+			<div id="form-label">Jabatan</div> 
+			<div id="form-input"><%= f.select :position_id, options_from_collection_for_select(Position.all, :id, :nama), :prompt => true %></div> 
+			<div id="clear"></div>
+			<div id="form-label">Status Dosen</div> 
+			<div id="form-input"><%= f.select :status_id, options_from_collection_for_select(Status.all, :id, :nama), :prompt => true %></div> 
+			<div id="clear"></div>
+	</fieldset>
+	</div> 
+	<div id="actions"> 
+		<%= f.submit "Input Dosen"%>
+	</div> 
+<% end %>
+
+

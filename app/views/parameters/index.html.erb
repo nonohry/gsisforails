@@ -1,0 +1,69 @@
+<div id="form">
+	<%= form_tag :action => 'ubah_semua' do %>
+		<fieldset>
+			<legend>Ubah Batas Waktu secara Keseluruhan</legend>
+				<div id="form-label">Tahun Ajaran</div>
+				<div id="form-input">
+					<%= select :parameter, :tahun_ajaran, options_for_select(year_collect(Parameter::YEAR)) %>
+				</div>
+				<div id="clear"></div>
+				<div id="form-label">Semester</div>
+				<div id="form-input">
+					<%= collection_select :parameter, :semester, Parameter.semester_nama_options, :first, :last %>
+				</div>
+				<div id="clear"></div>
+				<div id="form-label">Tanggal Mulai</div>
+				<div id="form-input"><%= date_select :parameter, :tanggal_mulai, :start_year => Date.current.year %></div>
+				<div id="clear"></div>
+				<div id="form-label">Tanggal Selesai</div>
+				<div id="form-input"><%= date_select :parameter, :tanggal_selesai, :start_year => Date.current.year %></div>
+				<div id="clear"></div>
+		</fieldset>	
+	<div class="actions"><%= submit_tag 'Ubah Keseluruhan'%></div>
+	<% end %>
+</div>
+
+<div id="form-sep"></div>
+<div id="form">
+	<fieldset>
+		<legend>Tambah Batas Waktu</legend>
+		<div id="info" style="width:auto;padding:10px 8px;">
+			<b style="color:red">PERHATIAN:</b><br><br>
+Untuk Membuat Tahun Ajaran Baru pada Suatu Prodi, Apabila Prodi telah ada di dalam daftar di bawah<br>
+Maka TIDAK perlu ditambahkan lagi, cukup MENGUBAH INFORMASI pada PRODI yang telah ada di dalam daftar Batas Waktu KRS <br>berdasarkan filter Perguruan Tinggi
+		</div>
+		<div class="actions"><%= link_to 'Tambah Batas Waktu', new_parameter_path %></div>
+	</fieldset>
+</div>
+
+
+<div id="form-sep"></div>
+	<table id="table-2">
+		<tr>
+			<th width="2%">No. </th>
+			<th>Program Studi</th>
+			<th>Tahun Ajaran</th>
+			<th>Semester</th>
+			<th>Tanggal Mulai</th>
+			<th>Tanggal Selesai</th>
+			<th>Status</th>
+			<th>Aksi</th>
+		</tr>
+		<% count = 0 %>
+		<% @parameters.each do |parameter| %>
+		<tr>
+			<td id="table-no"><%= count += 1 %></td>
+			<td><%= parameter.course.nama %></td>
+			<td align="center"><%= parameter.tahun_ajaran %></td>
+			<td align="center"><%= parameter.semester_nama %></td>
+			<td align="right"><%= parameter.tanggal_mulai.strftime("%d %B %Y") %></td>
+			<td align="right"><%= parameter.tanggal_selesai.strftime("%d %B %Y") %></td>
+			<td align="center"><%= raw status_krs(parameter) %></td>
+			<td id="aksi">
+				<%= link_to 'Ubah', edit_parameter_path(parameter) %>
+			</td>
+		</tr>
+		<% end %>
+	</table>
+</div>
+<div id="clear"></div>

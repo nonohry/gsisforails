@@ -1,0 +1,7 @@
+<% flash.each do |key, msg| %>
+		<% if key == :notice %>
+		  <%= content_tag :div, msg, :class => "success", :id => key %>
+		<% else %>
+			<%= content_tag :div, msg, :class => "warning", :id => key %>
+		<% end %>
+<% end %>

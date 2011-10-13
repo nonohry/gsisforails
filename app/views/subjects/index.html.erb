@@ -1,0 +1,39 @@
+<div id="title">Daftar Mata Kuliah</div>
+
+<div class="actions">
+  <%= link_to 'Tambah Mata Kuliah', new_subject_path %>
+</div>
+
+<div id="ditemukan">
+  Ditemukan: <%= pluralize(Subject.all.size, 'record') %>
+</div>
+
+<table id="table-2">
+  <tr>
+    <th width="2%">No.</th>
+    <th>Prodi</th>
+    <th>Kode</th>
+    <th>Nama</th>
+
+    <th width="100">Aksi</th>
+  </tr>
+	
+	<% count = 0 %>
+	<% @subjects.each do |subject| %>
+  <tr>
+    <td id="table-no"><%= count += 1 %></td>
+    <td><%= subject.course.nama %></td>
+    <td><%= subject.kode %></td>
+    <td><%= subject.nama %></td>
+    <td>
+			<%= link_to 'Edit', edit_subject_path(subject) %> |
+			<%= link_to 'Destroy', subject, confirm: 'Apakah anda yakin?', method: :delete %>
+		</td>
+  </tr>
+	<% end %>
+
+  
+</table>
+
+<%= paginate @subjects %>
+

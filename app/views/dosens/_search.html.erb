@@ -1,0 +1,32 @@
+<fieldset>
+	<legend>Pencarian</legend>
+		<div id="col1">
+			<%= form_for @search, :url => dosens_path do |f| %>	
+					
+					
+				<div id="label-3"><%= f.label :nip, "Nim" %></div>
+				<div id="label-4" style="width:auto;"><%= f.text_field :nip_equals %></div>
+				<div id="clear"></div>
+				<div id="label-3"><%= f.label :nama, "Nama" %></div>
+				<div id="label-4" style="width:auto;"><%= f.text_field :nama_equals %></div>
+				<div id="clear"></div>
+				
+		</div>
+		
+		<div id="col2">
+			<div id="label-3"><%= f.label :status_id, "Status" %></div>
+			<div id="label-4" style="width:auto;"><%= f.select :status_id_equals, Status.all.collect { |c| [c.nama, c.id]}, prompt: true %></div>
+			<div id="clear"></div>
+			<div id="label-3"><%= f.label :position_id, "Jabatan" %></div>
+			<div id="label-4" style="width:auto;"><%= f.select :position_id_equals, Position.all.collect { |c| [c.nama, c.id]}, prompt: true %></div>
+			<div id="clear"></div>
+		</div>
+	
+			
+		
+</fieldset>	
+		<div id="form-submit" style="float:left;">
+			<%= f.submit "Cari Mahasiswa"%>
+		</div>
+		<% end %>
+		<div id="clear"></div>

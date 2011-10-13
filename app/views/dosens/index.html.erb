@@ -1,0 +1,48 @@
+<div id="form">
+	<%= render 'search' %>
+</div>
+
+<div id="title">Daftar Dosen</div>
+
+<div class="actions">
+  <%= link_to 'Tambah Dosen', new_dosen_path %>
+</div>
+
+<div id="ditemukan">
+  Ditemukan: <%= pluralize(Dosen.all.size, 'record') %>
+</div>
+
+<table id="table-2">
+  <tr>
+    <th width="2%">No.</th>
+    <th>Nip</th>
+    <th>Nama</th>
+    <th>Gelar depan</th>
+    <th>Gelar belakang</th>
+    <th>Status</th>
+    <th>No telp</th>
+
+    <th width="100">Aksi</th>
+  </tr>
+	<% count = 0 %>
+	<% @dosens.each do |dosen| %>
+  <tr>
+    <td id="table-no"><%= count += 1 %></td>
+    <td><%= dosen.nip %></td>
+    <td><%= dosen.nama %></td>
+    <td><%= dosen.gelar_depan %></td>
+		<td><%= dosen.gelar_belakang %></td>
+		<td><%= dosen.status.nama %></td>
+		<td><%= dosen.no_telp %></td>
+    <td>
+			<%= link_to 'Edit', edit_dosen_path(dosen) %>
+			<%= link_to 'Destroy', dosen, confirm: 'Apakah anda yakin?', method: :delete %>
+		</td>
+  </tr>
+	<% end %>
+
+  
+</table>
+
+<%= paginate @dosens %>
+

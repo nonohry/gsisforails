@@ -1,0 +1,958 @@
+body{
+	font-family:Verdana, Helvetica,Helvetica Neue, Arial;
+	font-size:10pt;
+	color:#fff; 
+	/*background:url(/image/head-blue.png) no-repeat transparent;
+	background-color: #2c5aa0;d5e5ff*/
+	background:url(/image/blue-long.png) repeat-x transparent;
+	background-color:#AFC6e9;
+}
+
+legend{
+	font-family:Helvetica;
+	font-size:10pt;
+	color:#9f9f9f;
+}
+p{
+color:#4d4d4d;
+margin:1em 0;
+padding:0 10px;
+background:#fff;
+
+}
+
+.spacer{
+margin:0px 10px 5px 10px;
+}
+
+.margin-box{
+margin:10px;
+}
+
+.textdecor1{
+font-size:1.5em;
+}
+#clean{
+	clear:both;
+	margin:0 0 5px 0;
+}
+#ribbon{
+height:18px;
+background-color: #295394;
+}
+
+.end-head-heading1{
+text-shadow: 0px 1px 0px #406678;font: bold 1.5em Verdana;font-family:Helvetica,sans-serif;text-align:right;color:#fff;
+}
+
+.end-head-heading2{
+text-shadow: 0px 1px 0px #406678;font: bold 1.1em Verdana;font-family:Helvetica,sans-serif;text-align:left;padding:0px 20px 0 0;
+
+}
+/*
+#head-blue {
+height:132px;
+background:url(/image/head-blue.png) no-repeat transparent;
+}
+*/
+#back-blue{
+background-color: #fff;
+border:2px solid #fff;
+border-width: 0px 0px 0px 0px;
+ -webkit-box-shadow: rgba(0,0,0,0.2) 0px 3px 4px 4px;
+ -moz-box-shadow: rgba(0,0,0,0.2) 0px 3px 4px 4px;
+ box-shadow: rgba(0,0,0,0.2) 0px 3px 4px 4px;
+}
+/*
+#content_open{
+	background-color: #d5e5ff;
+	padding:0px 0px 0px 0px;
+	font-family:Helvetica, Helvetica Neue, Arial;
+
+}*/
+#form-login{
+background-color: #fff;
+border:1px solid #cecece;
+background:url(/image/bg.png) white no-repeat;
+background-position:right top;
+
+height:200px;
+width: 300px;
+padding: 0px;
+text-align: center;
+ border-radius
+ -webkit-border-radius: 10px;
+ -moz-border-radius: 10px;
+ border-radius: 10px;
+ -webkit-box-shadow: rgba(0,0,0,0.2) 0px 3px 3px;
+ -moz-box-shadow: rgba(0,0,0,0.2) 0px 3px 3px;
+ box-shadow: rgba(0,0,0,0.2) 0px 3px 3px; 
+}
+
+#form-label{
+	position:relative;
+	left:10px;
+	top:50px;
+	float:left;
+	width:70px;
+	color:#295394;
+}
+
+#form-input-depan input{
+	position:relative;
+	left:10px;
+	top:50px;
+	width:150px;
+	float:left;
+	border:1px solid #cecece;
+	padding:2px;
+	margin:0 0 4px 0;
+}
+#footer{
+	position:relative;
+	
+	margin:  auto;
+	text-align: center;
+	background-color: #fff;
+}
+
+#warning{
+	border:1px solid #cecece;
+	margin:0px 10px 4px 0px;
+	line-height:1.2em;
+	color:#4d4d4d;
+	float:left;
+	height:60px;
+	background-color:#fff;
+	
+}
+
+#box{
+background-color: #fff;
+margin-top: 10px;
+color:#4d4d4d;
+padding:0px;
+text-align: left;
+border: solid #0044aa;
+border-width: 0px 0px 0px 0px;
+ border-radius 
+ -webkit-border-radius: 10px;
+ -moz-border-radius: 10px;
+ border-radius: 10px;
+ -webkit-box-shadow: rgba(0,0,0,0.2) 0px 1px 2px 2px;
+ -moz-box-shadow: rgba(0,0,0,0.2) 0px 1px 2px 2px;
+ box-shadow: rgba(0,0,0,0.2) 0px 1px 2px 2px;
+}
+
+
+#box-menu
+{
+margin: 10px 0px 5px 5px;
+color:#fff;
+text-shadow: 0px -1px 0px #000;
+padding: 5px 5px 5px 5px;
+float: left;
+font: bold 1em Arial;
+
+overflow: hidden;
+margin-bottom: 1em;
+border: 0px solid #625e00;
+border-width: 0px 0;
+background: url(/image/bluemenu.png) center center repeat-x;
+}
+
+
+#button-login{
+	position:relative;
+	left:120px;
+	top:50px;
+	width:80px;
+	float:left;
+	border:0px solid #cecece;
+	padding:2px;
+	margin:0 0 4px 0;
+}
+
+.button{
+	display: inline-block;
+	
+	padding:5px 10px 6px 10px;
+	font-weight:bold;
+	text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+	border:1px solid rgba(0,0,0,0.4);
+	background: url(/image/button-bg.png) center center repeat-x;
+	-moz-border-radius: 5px;
+	-moz-box-shadow: 0px 0px 2px rgba(0,0,0,0.5);
+	-webkit-border-radius: 5px;
+	-webkit-box-shadow: 0px 0px 2px rgba(0,0,0,0.5);
+} 
+
+.button-box{
+	display: inline-block;	
+	padding:2px 2px 2px 2px;
+	text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+	border:1px solid rgba(0,0,0,0.4);
+	background: url(/image/button-bg.png) center center repeat-x;
+	-moz-border-radius: 5px;
+	-moz-box-shadow: 0px 0px 2px rgba(0,0,0,0.5);
+	-webkit-border-radius: 5px;
+	-webkit-box-shadow: 0px 0px 2px rgba(0,0,0,0.5);
+} 
+
+.blue		{background-color: #CCCCCC; color: #141414;}
+.blue:hover	{background-color: #00c0ff; color: #ffffff;}
+
+.green		{background-color: #CCCCCC; color: #141414;}
+.green:hover	{background-color: #8aff00; color: #ffffff;}
+
+.red		{background-color: #CCCCCC; color: #141414;}
+.red:hover	{background-color: #ff004e; color: #ffffff;}
+#form-1{
+	
+	padding:5px;	
+	
+}
+
+#form-1 fieldset{
+/* 	background:#ffffff; */
+	background:#f9f9f9;
+	border:1px solid #cecece;
+	margin:-2px 0 0 0;
+	
+}
+
+#form-1 input{
+	border:1px solid #cecece;
+	width:auto;
+}
+
+#form-2{
+	
+	padding:5px;	
+	
+}
+
+#form-2 fieldset{
+/* 	background:#ffffff; */
+	background:#f9f9f9;
+	border:1px solid #cecece;
+	margin:-2px 0 0 0;
+	
+}
+
+#form-2 input{
+	border:1px solid #cecece;
+	width:auto;
+}
+
+#form-label2{
+	float:left;
+	width:130px;
+	padding:5px 0px 0 10px;
+/* 	color:#5e5e5e; */
+	color:#666666;
+}
+#form-input{
+	float:left;
+	width:400px;
+	padding:3px 1px 2px 1px;
+}
+#form-input-1{
+	color:#4d4d4d;
+	float:left;
+	width:400px;
+	font-weight:bold;
+	padding:3px 1px 2px 2px;
+}
+#form-input input{
+	border:1px solid #cecece;
+	padding:2px 3px 3px;
+	width:400px;
+/* 	background:url(/image/head-menu.png); */
+}
+
+#form-input textarea{
+	border:1px solid #cecece;
+	padding:2px 3px 3px;
+	width:400px;
+/* 	background:url(/image/pic2.png); */
+}
+#form-input select{
+	border:1px solid #cecece;
+	padding:2px 3px 3px;
+	color:#5e5e5e;
+/* 	background:url(/image/head-menu.png); */
+}
+#form-input input:focus{
+/* 	background:#fafafa; */
+	background:lightyellow;
+	color:#4d4d4d;
+}
+#form-input select:focus{
+	background:#fafafa;
+}
+#form-input textarea:focus{
+	border:1px solid #cecece;
+	padding:2px 3px 3px;
+	width:200px;
+	background:#fafafa;
+}
+
+#search{
+	padding:6px 5px;
+	border:1px solid #cecece;
+	margin:0px 0px 15px 0px;
+/* 	background:#fafafa; */
+	background:url('/image/head-menu.png');
+	color:#aeaeae;
+	height:20px !important;
+	max-height:20px !important;
+}
+
+#search-label{
+	float:left;
+	padding:4px 0px;
+	margin:0px 4px 0px 0px;
+}
+#search-form{
+	float:left;
+	border:1px solid #cecece;
+	padding:3px;
+	margin:0px 4px 0px 0px;
+	color:#aeaeae;
+	background:url('/image/head-menu.png');
+}
+
+#search-form:focus{
+	background:#f5f5f5;
+}
+
+#search-submit-form{
+	float:left;
+	border:1px solid #cecece;
+	padding:3px;
+	color:#aeaeae;
+	background:url('/image/head-menu.png');
+}
+/*#form-submit input{
+	border:1px solid #cecece;
+	padding:3px;
+	margin:5px 0px;
+	color:white;
+	background:url('/image/button.png');
+}
+#form-submit button{
+	border:1px solid #cecece;
+	padding:3px;
+	margin:5px 0px;
+
+}
+
+-----------------------------------------------
+Navigation
+----------------------------------------------- */
+
+/* navigation (horizontal subnavigation)
+----------------------------------------------- */
+#ribbon-icon{
+	border:solid 1px #2c5aa0; 
+	background: #aaccff url(/image/logo24p.png) 2px 1px no-repeat;	
+	text-align:right;
+	height:28px;
+	}
+
+.nav-icon{
+overflow: hidden;
+}
+
+.nav-icon ul{
+margin: 0 0 0 40px;
+padding: 0px;
+float: left;
+height:27px;
+width: 100%;
+font: bold 13px Arial;
+
+
+}
+
+.nav-icon ul li{
+display: inline;
+}
+
+.nav-icon ul li a{
+float: left;
+color: #000;
+text-shadow: 0px -1px 0px #fff;
+padding: 9px 11px;
+text-decoration: none;
+}
+
+.nav-icon ul li a:visited{
+color: white;
+}
+
+.nav-icon ul li a:hover, .menu ul li .current{ /*background of main menu bar links onMouseover*/
+color: #fff;
+text-shadow: 0px -1px 0px #000;
+background-color:#666;
+}
+
+#nav {
+	width: 100%;
+	height:18px;
+	float: left;
+	margin: 1px 0px 1px 0;
+	padding: 0px;
+	list-style: none;
+	background-color: #295394;
+	border-bottom: 0px solid #ccc; 
+	border-top: 0px solid #ccc;
+	position:relative;
+	top:-4px;
+ -webkit-box-shadow: rgba(0,0,0,0.2) 0px 1px 3px;
+ -moz-box-shadow: rgba(0,0,0,0.2) 0px 1px 3px;
+ box-shadow: rgba(0,0,0,0.2) 0px 1px 3px;	
+ }
+
+#nav li {
+	float: right; }
+#nav li a {
+	display: block;
+	padding: 0px 5px;
+	text-decoration: none;
+	font-size:10pt;
+	font-weight: bold;
+	color: white;
+	border-right: 1px solid #ccc; }
+#nav li a:hover {	
+	color: yellow;
+	background-color: #295394; }
+
+/*
+-----------------------------------------------
+Menu Utama
+----------------------------------------------- */
+/*-----------------------------------------------
+hijau Gradient
+----------------------------------------------- */
+#menu2
+{
+display: block;
+font-family: Helvetica, Arial, sans-serif;
+font-weight: bold;
+float: left;
+font: bold 1em Arial;
+width: 100%;
+text-align: center;
+text-decoration: none;
+padding: 1px;
+border: 1px solid #659635;
+text-shadow: 0px -1px 0px  #777777;
+color: #ffffff;
+-moz-border-radius: 0 0 10px 10px;
+-webkit-border-radius: 0 0 10px 10px;
+border-radius: 0 0 10px 10px;
+background:url(/image/menu2.png) repeat-x #fff;
+}
+
+.menu{
+overflow: hidden;
+text-shadow: 0px -1px 0px #000;
+}
+
+.menu ul{
+margin: 0 0 0 20px;
+padding: 0px;
+float: left;
+height:27px;
+width: 100%;
+font: bold 13px Arial;
+
+}
+
+.menu ul li{
+display: inline;
+}
+
+.menu ul li a{
+float: left;
+color: white;
+padding: 9px 11px;
+text-decoration: none;
+text-shadow: 0px -1px 0px #000;
+}
+
+.menu ul li a:visited{
+color: white;
+}
+
+.menu ul li a:hover, .menu ul li .current{ /*background of main menu bar links onMouseover*/
+color: white;
+background:#666666 url(/image/blueactive.gif) center center repeat-x;
+}
+
+
+/* Table css*/
+
+.table-container {
+  display: table;
+  margin:5px 0 5px 10px;
+}
+
+.row {
+  display: table-row;
+}
+
+.cell {
+  display: table-cell;
+  border: 0px solid #ccc;
+  padding: 1em;
+}
+
+#table-1{
+	border-collapse:collapse;
+	border-spacing:1;
+	border:1px solid #cecece;
+	padding:4px;
+	background:#ffffff;
+	color: #333333;
+	font-family:Helvetica, sans-serif;
+	font-size:13px;
+}
+
+#table-1 tr:hover{
+	background:lightyellow;
+	cursor:pointer;
+	color:green;
+	font-weight: bold;
+/*	font-size:18px;*/
+}
+
+#table-1 td, th{
+	padding:4px;
+	border:1px solid #cecece;
+}
+
+#table-1 th{
+/* 	background:navy; */
+	background:#f6f6f6;
+/* 	color:yellow; */
+	color:#333333;
+	font-weight:bold;
+}
+
+#table-1 a:hover{
+	text-decoration:underline;
+}
+
+#table-pilih{
+	border-collapse:collapse;
+	border-spacing:1;
+	border:1px solid #cecece;
+	padding:4px;
+	background:#ffffff;
+	font-family:Helvetica, sans-serif;
+	font-size:13px;
+}
+
+#table-pilih tr:hover{
+	background:lightyellow;
+	cursor:pointer;
+	color:green;
+	font-weight:bold;
+/*	font-size:18px;*/
+}
+
+#table-pilih td, th{
+	padding:4px;
+	border:1px solid #cecece;
+}
+
+#table-1 #aksi{
+	text-align:center;
+	padding:4px;
+}
+
+#table-1 #aksi a{
+/* 	background:url('/image/head-menu.png'); */
+/* 	border:1px solid #cecece; */
+/* 	padding:3px 2px; */
+}
+
+/* Dropline menu
+----------------------------------------------- */
+
+.droplinebar{
+overflow: hidden;
+text-shadow: 0px -1px 0px #000;
+}
+
+.droplinebar ul{
+margin: 0;
+padding: 0;
+float: left;
+height:27px;
+width: 100%;
+font: bold 13px Arial;
+background: #242c54 url(/image/bluemenu.png) center center repeat-x; /*default background of menu bar*/
+}
+
+.droplinebar ul li{
+display: inline;
+}
+
+.droplinebar ul li a{
+float: left;
+color: white;
+padding: 9px 11px;
+text-decoration: none;
+}
+
+.droplinebar ul li a:visited{
+color: white;
+}
+
+.droplinebar ul li a:hover, .droplinebar ul li .current{ /*background of main menu bar links onMouseover*/
+color: white;
+background: transparent url(/image/hovermenu.png) center center repeat-x;
+}
+
+/* Sub level menus*/
+.droplinebar ul li ul{
+position: absolute;
+z-index: 100;
+left: 0;
+top: 0;
+background: #303c76; /*sub menu background color */
+visibility: hidden;
+}
+
+/* Sub level menu links style */
+.droplinebar ul li ul li a{
+font: normal 13px Verdana;
+padding: 6px;
+padding-right: 8px;
+margin: 0;
+border-bottom: 1px solid navy;
+}
+
+.droplinebar ul li ul li a:hover{ /*sub menu links' background color onMouseover */
+background: #242c54;
+}
+
+<style type="text/css">
+
+/*Credits: Dynamic Drive CSS Library */
+/*URL: http://www.dynamicdrive.com/style/ */
+
+.solidblockmenu {
+float: left;
+font: bold 13px Arial;
+width: 100%;
+overflow: hidden;
+margin-bottom: 1em;
+border: 1px solid #625e00;
+border-width: 1px 0;
+}
+
+.solidblockmenu ul{
+font: bold 13px Arial;
+height:33px;
+background: black url(/image/bluedefault.png) center center repeat-x;
+text-shadow: 0px -1px 0px #000;
+}
+
+.solidblockmenu li{
+display: inline;
+}
+
+.solidblockmenu li a{
+float: left;
+color: white;
+padding: 9px 11px;
+text-decoration: none;
+border-right: 1px solid white;
+
+}
+
+.solidblockmenu li a:visited{
+color: white;
+}
+
+.solidblockmenu li a:hover, .solidblockmenu li .current{
+color: white;
+background: transparent url(/image/greenmenu.png) center center repeat-x;
+}
+
+
+/*===================round box border===============*/
+#wrap {
+	max-width:50em;	
+}
+* html #wrap {width:50em}
+/* Default CSS
+================================================*/
+/* Basic styling, used when JavaScript is unsupported */
+.cbb {
+	margin:1em 0;
+	padding:0 10px;
+	border:1px solid #666;
+	background:#fff;
+	color:#4d4d4d;
+}
+.cbb h1 {
+	margin:0 -10px;
+	padding:0.3em 10px;
+	background:#efece6;
+	font:bold 1.2em/1 Arial, Helvetica, sans-serif;
+}
+/* Normal styling */
+.cb {margin:0.5em 0;}
+
+	/* Top corners and border */
+.bt {
+	height:17px;
+	margin:0 0 0 18px;
+	background:url(/image/box.png) no-repeat 100% 0;
+}
+.bt div {
+	position:relative;
+	left:-18px;
+	width:18px;
+	height:17px;
+	background:url(/image/box.png) no-repeat 0 0;
+	font-size:0;
+	line-height:0;
+}
+
+	/* Bottom corners and border */
+.bb {
+	height:14px;
+	margin:0 0 0 12px;
+	background:url(/image/box.png) no-repeat 100% 100%;
+}
+.bb div {
+	position:relative;
+	left:-12px;
+	width:12px;
+	height:14px;
+	background:url(/image/box.png) no-repeat 0 100%;
+	font-size:0;
+	line-height:0;
+}
+
+	/* Left border */
+.i1 {
+	padding:0 0 0 12px;
+	background:url(/image/borders.png) repeat-y 0 0;
+}
+	/* Right border */
+.i2 {
+	padding:0 12px 0 0;
+	background:url(/image/borders.png) repeat-y 100% 0;
+}
+	/* Wrapper for the content. Use it to set the background colour and insert some padding between the borders and the content. */
+.i3 {
+	display:block;
+	margin:0;
+	padding:1px 10px;
+	background:#fff;
+}
+	/* Make the content wrapper auto clearing so it will contain floats (see http://positioniseverything.net/easyclearing.html). */
+.i3:after {
+	content:"."; 
+	display:block; 
+	height:0; 
+	clear:both; 
+	visibility:hidden;
+}
+.i3 {display:inline-block;}
+.i3 {display:block;}
+/* Default CSS ends here */
+
+/* Custom CSS
+================================================*/
+/* You can use different borders for different boxes on the same page. Just adjust the CSS. Here are a few examples, one of which uses the GIF images instead of the PNG images. Note that you can also adjust borders, heights and paddings this way. Remember to adjust the IE CSS as well. */
+
+.one {
+	position:absolute;
+	top:0;
+	right:0;
+}
+.two {
+	float:left;
+	width:45%;
+}
+.two .i1,
+.two .i2 { background-image:url(/image/borders.gif); }
+.two .bt,
+.two .bt div,
+.two .bb,
+.two .bb div { background-image:url(/image/box.gif); }
+#three {
+	float:left;
+	clear:both;
+	width:80%;
+}
+#three .cb {
+	float:left;
+	width:40%;
+}
+.button2 {
+	float:left;
+	margin-top:0;
+}
+.button2 .bt {
+	height:8px;
+	margin:0 0 0 9px;
+	background-image:url(/image/button.png);
+}
+.button2 .bt div {
+	left:-9px;
+	width:9px;
+	height:8px;
+	background-image:url(/image/button.png);
+}
+.button2 .bb {
+	height:8px;
+	margin:0 0 0 8px;
+	background-image:url(/image/button.png);
+}
+.button2 .bb div {
+	left:-8px;
+	width:8px;
+	height:8px;
+	background-image:url(/image/button.png);
+}
+.button2 .i1 {
+	padding:0 0 0 3px;
+	background-image:url(/image/button-borders.png);
+}
+.button2 .i2 {
+	padding:0 3px 0 0;
+	background-image:url(/image/button-borders.png);
+}
+.button2 .i3 {
+	padding:0 0.5em;
+	background:#3a3d40 url(/image/button.png) no-repeat -3px -8px;
+	font-weight:bold;
+	text-decoration:none;
+	text-align:center;
+}
+.button2 a:link,
+.button2 a:visited,
+.button2 a:hover {
+	border:none;
+	color:#fff;
+}
+
+/* Just a bit of styling for this demo page. Adjust as you wish. */
+#absolute-wrapper {
+	position:relative;
+	height:9em;
+}
+.cb li {margin-left:1em;}
+
+.cb h1 {
+	margin:0 -10px;
+	padding:0.3em 10px;
+	background:#efece6;
+	font:bold 1.2em/1 Arial, Helvetica, sans-serif;
+	background: url(/image/bluemenu.png) center center repeat-x;
+	color:#fff;
+	text-shadow: 0px -1px 0px #000;
+}
+
+
+#liquid-round {
+width:70%;
+margin:0px auto;
+background:#fff url(http://127.0.0.1/sik2/img/leftside.gif) repeat-y left top;
+}
+
+.atas {
+      width:100%;
+      height:20px;
+      background:url(http://127.0.0.1/sik2/img/top.gif) no-repeat left top;
+}
+
+.atas span {
+      display:block;
+      position:relative;
+      height:20px;
+      background:url(http://127.0.0.1/sik2/img/top-right.gif) no-repeat right top;
+}
+
+.center-content {
+      position:relative;
+      background:url(/image/rightside.gif) repeat-y right top;
+      padding:1px 20px 1px 25px;
+      margin:-1px 0 -50px 0;
+}
+
+
+.bottom {
+      height:60px;
+      background:url(/image/bottom.gif) no-repeat left bottom;
+      }
+
+.bottom span {
+      display:block;
+      position:relative;
+      height:60px;
+      background:url(/image/bottom-right.gif) no-repeat right top;
+}
+
+/*mangafox menu*/
+ul#menu3 {
+	float: right;
+	padding-top: 10px;
+	margin-top: 0;
+	line-height: 150%;
+}
+ul#menu3 li {
+	float: left;
+	width: 135px;
+	height: 38px;
+	text-align: center;
+	background: url(/image/menu_button.gif) no-repeat;
+	font: bold 12px/150% Arial, Helvetica, sans-serif;
+}
+ul#menu3 li a {
+	float: left;
+	width: 135px;
+	height: 30px;
+	padding-top: 10px;
+	font-size: 13px;
+	text-decoration: none;
+	color: #333;
+}
+ul#menu3 li a:hover, ul#menu li a.selected {
+	color: #500106;
+	background: url(/image/menu_button_over.gif) no-repeat;
+}
+ul#menu3 li.left {
+	background: url(/image/menu_left_button.gif) no-repeat;
+}
+ul#menu3 li.left a:hover, ul#menu li.left a.selected {
+	background: url(/image/menu_left_button_over.gif) no-repeat;
+	color: #500106;
+}
+ul#menu3 li.right {
+	background: url(/image/menu_right_button.gif) no-repeat;
+}
+ul#menu3 li.right a:hover, ul#menu li.right a.selected {
+	background: url(/image/menu_right_button_over.gif) no-repeat;
+	color: #500106;
+}
+
+#error_explanation {
+	color: #500106;
+}
+
+#isi {
+	margin: 10px;
+	padding: 10px;
+}
+

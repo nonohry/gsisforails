@@ -1,0 +1,33 @@
+<div id="title-mhs">Kartu Rencana Studi</div>
+
+<b>Semester Aktif: <%= semester_aktif %></b><br><br>
+<div style="float:left;">
+
+	<div style="float:left;width:200px;">
+		<%= form_tag mahasiswa_krs_path do %>
+			<%= hidden_field_tag 'id', @mahasiswa.id %>
+			<%= select_tag 'smt', options_for_select([*1..12].collect {|x| [x,x]}) %>
+			<%= submit_tag 'Pilih' %>
+		<% end %>
+	</div>
+	
+	<div style="float:left;margin:0px 0px 0px 4px;">
+		<%= form_tag mahasiswa_print_krs_path, target: '_blank' do %>
+			<%= hidden_field_tag 'id', @mahasiswa.id %>
+			<%= submit_tag 'Print KRS' %>&nbsp;&nbsp; 
+		<% end %>
+	</div>
+	<div id="clear"></div>
+</div>
+
+<br>
+<br />
+
+	<% unless @krs == [] %>
+		<%= render 'daftar_krs', card_plans: @krs %>
+	<% else %>
+		<br>
+		<div id="info" style="width:300px;">Tidak ada mata kuliah yang diambil pada semester ini</div>
+	<% end %>
+</div>
+<div id="clear"></div>

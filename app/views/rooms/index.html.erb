@@ -1,0 +1,50 @@
+<div id="title">Daftar Ruangan</div>
+
+<div class="actions">
+  <%= link_to 'Tambah Ruangan', new_room_path %>
+</div>
+
+<div id="ditemukan">
+  Ditemukan: <%= pluralize(@rooms.size, 'record') %>
+</div>
+
+<table id="table-2">
+  <tr>
+    <th width="2%">No.</th>
+    <th>Kode</th>
+    <th>Nama</th>
+    <th>Kapasitas</th>
+
+    <th width="100">Aksi</th>
+  </tr>
+	<% @rooms.each do |room| %>
+  <tr>
+    <td id="table-no">1</td>
+    <td><%= room.kode %></td>
+    <td><%= room.nama %></td>
+    <td><%= room.kapasitas %></td>
+    <td class="actions" %>
+			<%= link_to 'Edit', edit_room_path(room) %>
+			<%= link_to 'Destroy', room, confirm: 'Apakah anda yakin?', method: :delete %>
+		</td>
+  </tr>
+	<% end %>
+
+  
+</table>
+
+<div id="tnt_pagination">
+	<span class="disabled_tnt_pagination">Prev</span>
+	<a href="#1">1</a>
+	<a href="#2">2</a>
+	<a href="#3">3</a>
+	<span class="active_tnt_link">4</span>
+	<a href="#5">5</a>
+	<a href="#6">6</a>
+	<a href="#7">7</a>
+	<a href="#8">8</a>
+	<a href="#9">9</a>
+	<a href="#10">10</a>
+	<a href="#forwaed">Next</a>
+</div>
+

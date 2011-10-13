@@ -1,0 +1,29 @@
+<fieldset>
+	<legend>Pencarian</legend>
+		<div id="col1">
+			<%= form_for @search, :url => students_path do |f| %>	
+					
+					
+				<div id="label-3"><%= f.label :nim, "Nim" %></div>
+				<div id="label-4" style="width:auto;"><%= f.text_field :nim_equals %></div>
+				<div id="clear"></div>
+				<div id="label-3"><%= f.label :nama_depan, "Nama Depan" %></div>
+				<div id="label-4" style="width:auto;"><%= f.text_field :nama_depan_equals %></div>
+				<div id="clear"></div>
+				
+		</div>
+		
+		<div id="col2">
+			<div id="label-3"><%= f.label :tahun_masuk, "Angkatan" %></div>
+			<div id="label-4" style="width:auto;"><%= f.select :tahun_masuk_equals, options_for_select(year_collect(Parameter::YEAR)), prompt: "Silahkan" %></div>
+			<div id="clear"></div>
+		</div>
+	
+			
+		
+</fieldset>	
+		<div id="form-submit" style="float:left;">
+			<%= f.submit "Cari Mahasiswa"%>
+		</div>
+		<% end %>
+		<div id="clear"></div>

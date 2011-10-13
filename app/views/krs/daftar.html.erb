@@ -1,0 +1,10 @@
+<% if Time.now > Parameter.last.tanggal_mulai  && Time.now < Parameter.last.tanggal_selesai %>
+	<%= render 'mk_ditawarkan', teachings: @teachings %>
+<% else %>
+
+<div id="back-blue" class="container_12">
+<div id="box" class="grid_7">
+<p>Masa Registrasi KRS sudah berakhir. Bukan Waktu untuk pengisian KRS</p>
+</div>
+<% end %>
+

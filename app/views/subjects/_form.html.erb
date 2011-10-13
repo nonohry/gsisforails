@@ -1,0 +1,30 @@
+<%= form_for(@subject) do |f| %>
+<%= render 'shared/error_explanation', model: @subject %>
+
+
+ 	<div id="form"> 
+		<fieldset> 
+			<legend>Data Akademik</legend>
+			<div id="form-label">Program Studi</div> 
+			<div id="form-input"><%= f.select :course_id, options_from_collection_for_select(Course.all, :id, :nama) %></div> 
+			<div id="clear"></div>
+			<div id="form-label">Kelompok MK</div> 
+			<div id="form-input"><%= f.select :mk_group_id, options_from_collection_for_select(MkGroup.all, :id, :keterangan) %></div> 
+			<div id="clear"></div>
+		</fieldset>
+		<fieldset> 
+			<legend>Data Umum</legend> 
+				<div id="form-label">Kode Mata Kuliah</div> 
+				<div id="form-input"><%= f.text_field :kode %></div> 
+				<div id="clear"></div> 
+				<div id="form-label">Nama Mata Kuliah</div> 
+				<div id="form-input"><%= f.text_field :nama %></div> 
+				<div id="clear"></div> 
+		</fieldset>		
+	</div> 
+	<div id="actions"> 
+		<%= f.submit "Input Mata Kuliah"%>
+	</div> 
+<% end %>
+
+

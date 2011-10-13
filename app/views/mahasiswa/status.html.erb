@@ -1,0 +1,32 @@
+<div id="title-mhs">Status Mahasiswa</div>
+
+<div id="warning">
+	<b>Peringatan!!!</b><br>
+	Mengubah Status Mahasiswa akan mempengaruhi login Mahasiswa ke dalam sistem<br>
+</div>
+
+<div id="form">
+	<%= form_tag action: 'simpan_status' do %>
+		<div id="form-label">NIM</div>
+		<div id="form-input">: <%= @mahasiswa.nim %></div>
+		<div id="clear"></div>
+		<div id="form-label">Nama</div>
+		<div id="form-input">: <%= @mahasiswa.nama_lengkap %></div>
+		<div id="clear"></div>
+		<div id="form-label">Prodi</div>
+		<div id="form-input">: <%= @mahasiswa.prodi_strata %></div>
+		<div id="clear"></div>
+		<div id="form-label">Status Sekarang</div>
+		<div id="form-input">: <%= @mahasiswa.active.nama if @mahasiswa.active %></div>
+		<div id="clear"></div>
+		<div id="form-label">Ubah Status</div>
+		<div id="form-input">
+			<%= select_tag 'active_id', options_for_select(Active.all.collect { |c| [c.nama, c.id] }) %>
+		</div>
+		<div id="clear"></div>
+	<div class='actions'>
+		<%= submit_tag 'Ubah Status' %>
+	</div>
+	<% end %>
+</form>
+</div>

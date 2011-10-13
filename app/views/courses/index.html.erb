@@ -1,0 +1,37 @@
+<div id="title">Daftar Program Studi</div>
+
+<div class="actions">
+  <%= link_to 'Tambah Program Studi', new_course_path %>
+</div>
+
+<div id="ditemukan">
+  Ditemukan: <%= pluralize(@courses.size, 'record') %>
+</div>
+
+<table id="table-2">
+  <tr>
+    <th width="2%">No.</th>
+    <th>Kode Prodi</th>
+    <th>Nama Program Studi</th>
+    <th>Akreditasi</th>
+
+    <th width="100">Aksi</th>
+  </tr>
+	<% @courses.each do |courses| %>
+  <tr>
+    <td id="table-no">1</td>
+    <td><%= courses.kode %></td>
+    <td><%= courses.nama %></td>
+    <td><%= courses.akreditasi %></td>
+    <td class="actions">
+			<%= link_to 'Edit', edit_course_path(courses) %>
+			<%= link_to 'Destroy', courses, confirm: 'Apakah anda yakin?', method: :delete %>
+		</td>
+  </tr>
+	<% end %>
+
+  
+</table>
+
+<%= paginate @courses %>
+

@@ -1,0 +1,35 @@
+<div id="title">Daftar KMK</div>
+
+<div class="actions">
+  <%= link_to 'Tambah KMK', new_mk_group_path %>
+</div>
+
+<div id="ditemukan">
+  Ditemukan: <%= pluralize(@mk_groups.size, 'record') %>
+</div>
+
+<table id="table-2">
+  <tr>
+    <th width="2%">No.</th>
+    <th>Kode</th>
+    <th>Nama</th>
+    <th>Keterangan</th>
+
+    <th width="100">Aksi</th>
+  </tr>
+	
+	<% count = 0; @mk_groups.each do |mk_group| %>
+  <tr>
+    <td id="table-no"><%= count += 1 %></td>
+    <td><%= mk_group.kode %></td>
+    <td><%= mk_group.nama %></td>
+    <td><%= mk_group.keterangan %></td>
+    <td class="actions">
+			<%= link_to 'Edit', edit_mk_group_path(mk_group) %>
+			<%= link_to 'Destroy', mk_group, confirm: 'Apakah anda yakin?', method: :delete %>
+		</td>
+  </tr>
+	<% end %>
+
+  
+</table>

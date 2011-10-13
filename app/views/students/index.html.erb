@@ -1,0 +1,50 @@
+<div id="form">
+	<%= render 'search' %>
+</div>
+
+<div id="title">Daftar Mahasiswa</div>
+
+<div class="actions">
+  <%= link_to 'Tambah Mahasiswa', new_student_path %>  <%= link_to 'Export to XLS', students_path + ".xls" %>
+</div>
+
+<div id="ditemukan">
+  Ditemukan: <%= pluralize(Student.all.size, 'record') %>
+</div>
+
+<table id="table-2">
+  <tr>
+    <th width="2%">No.</th>
+    <th>NIM</th>
+    <th>Nama</th>
+    <th>Nama Belakang</th>
+		<th>Agama</th>
+		<th>Gender</th>
+		<th>Program Studi</th>
+		<th>Angkatan</th>
+
+    <th width="100">Aksi</th>
+  </tr>
+	<% i = 0 %>
+	<% @students.each do |student| %>
+  <tr>
+    <td id="table-no"><%= i += 1 %></td>
+    <td><%= link_to student.nim, biodata_path(id: student.id) %></td>
+    <td><%= link_to student.nama_depan, biodata_path(id: student.id) %></td>
+    <td><%= student.nama_belakang %></td>
+    <td><%= student.religion.nama %></td>
+    <td><%= student.gender.nama %></td>
+		<td><%= student.course.nama %></td>
+    <td><%= student.tahun_masuk %></td>
+    <td>
+			<%= link_to 'Edit', edit_student_path(student) %> | 
+			<%= link_to 'Pass', edit_student_path(student) %> | 
+			<%= link_to 'Destroy', student, confirm: 'Apakah anda yakin?', method: :delete %>
+		</td>
+  </tr>
+	<% end %>
+
+  
+</table>
+
+<%= paginate @students %>

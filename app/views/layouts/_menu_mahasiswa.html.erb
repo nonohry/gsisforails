@@ -1,0 +1,16 @@
+<div id="menu0">
+	<div id="menu-header-2">
+	<div id="label-n1">Detail Mahasiswa</div>
+	<div id="label-n">NIM</div><div id="label-n2"><%= @mahasiswa.nim || "" %></div><div id="clear"></div>
+	<div id="label-n">Nama</div><div id="label-n2"><%= @mahasiswa.nama_depan || "" %></div><div id="clear"></div>
+	<div id="label-n">Prodi</div><div id="label-n2"><%= @mahasiswa.course.nama || "" %></div><div id="clear"></div>
+	<div id="tombol"><%= link_to 'Halaman Utama', students_path %></div>
+</div>
+
+<div id="menu_"><%= link_to 'Biodata', biodata_path(@mahasiswa.id) %></div>
+<div id="menu_"><%= link_to 'Password', password_path(@mahasiswa.id) %></div>
+<div id="menu_"><%= link_to 'Status', status_path(@mahasiswa.id) %></div>
+<div id="menu_"><%= link_to 'Kartu Rencana Studi', krs_path(@mahasiswa.id) %></div>
+<div id="menu_"><%= link_to 'Kartu Hasil Studi', khs_path(@mahasiswa.id) %></div>
+<div id="menu_"><%= link_to 'Transkrip Nilai', nilai_path(@mahasiswa.id) %></div>
+</div>

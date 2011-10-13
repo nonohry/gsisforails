@@ -1,0 +1,29 @@
+	<div id="box" class="grid_12">   
+		<div id="box-menu" style="width:920px;"> 
+
+			<div style="float:left">
+				<%= form_tag krs_print_krs_path, target: '_blank' do %>
+					
+					<%= submit_tag 'Print KRS', class: "button-box blue" %>&nbsp;&nbsp; 
+ 
+				<% end %>
+			</div>
+
+			<div style="float:left">
+				<%= form_tag krs_print_khs_path, target: '_blank' do %>
+					<%= submit_tag 'Print KHS', class: "button-box blue" %>
+				<% end %>
+			</div>
+			<div id="clean"></div>
+</div>
+
+
+
+<br>
+<% if @mahasiswa.card_plans != [] %>
+	<%= render 'krs_diambil', krs: @card_plans %>
+<% else %>
+	<p>Tidak ada mata kuliah yang diambil semester ini.</p>
+<% end %>
+
+</div>

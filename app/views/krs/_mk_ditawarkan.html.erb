@@ -1,0 +1,42 @@
+<div id="back-blue" class="container_12">
+	<div id="box" class="grid_4">
+	  <div id="box-menu" style="width:280px;">Pengumuman</div>
+	<div id="form-2">
+		<p>
+			<b style="color:red">Perhatian!!!</b>
+			<br>Jadwal KRS Online :: KRS Online Tutup sampai tanggal 
+			<b style="color:red"><%= Parameter.last.tanggal_selesai.strftime("%e %B %Y") %></b>
+		</p>
+	</div>
+</div>
+
+<div id="box" class="grid_12">
+	<div id="box-menu" style="width:920px;">
+ 	Mata Kuliah yang Ditawarkan untuk Semester <%= @smtMhs %> 
+ 	</div>
+	<div class="spacer">
+		<%= form_tag krs_simpan_krs_path do %>
+		<table id="table-1" style="width:450px;">
+			<tr>
+				<th width="10">Pilih</th>
+				<th>Kode Mata Kuliah</th>
+				<th>Nama Mata Kuliah</th>
+				<th width="40">SKS</th>
+			</tr>
+			<% teachings.each do |teaching| %>
+			<tr>
+				<td><%= check_box_tag "teaching_ids[]", teaching.id %></td>
+				<td><%= teaching.subject.kode %></td>
+				<td><%= teaching.subject.nama %></td>
+				<td><%= teaching.sks %></td>
+			</tr>
+			<% end %>
+		</table>
+		
+		<div class="clear"></div>
+	</div>
+	<div id="box-menu" style="width:920px">
+		<%= submit_tag "Submit KRS" %> &nbsp;&nbsp;Mata Kuliah yang dipilih&nbsp; &nbsp; <%= @teachings.sum('sks') %> SKS
+	</div>
+	<% end %>
+</div>

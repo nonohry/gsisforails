@@ -1,0 +1,53 @@
+<%= form_for(@course) do |f| %>
+  <% if @course.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@course.errors.count, "error") %> prohibited this course from being saved:</h2>
+
+      <ul>
+      <% @course.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+ 	<div id="form"> 
+	<fieldset> 
+		<legend>Data Umum</legend> 
+			<div id="form-label">Perguruan Tinggi</div> 
+			<div id="form-input"><%= f.select :college_id, options_from_collection_for_select(College.all, :id, :nama) %></div> 
+			<div id="clear"></div> 
+			<div id="form-label">Jenjang</div> 
+			<div id="form-input"><%= f.select :jenjang, Course::JENJANG.to_a.collect { |id, nama| [nama, id] } %></div> 
+			<div id="clear"></div> 
+			<div id="form-label">Kode Prodi</div> 
+			<div id="form-input"><%= f.text_field :kode %></div> 
+			<div id="clear"></div>
+			<div id="form-label">Nama Prodi</div> 
+			<div id="form-input"><%= f.text_field :nama %></div> 
+			<div id="clear"></div> 
+			<div id="form-label">No SK</div> 
+			<div id="form-input"><%= f.text_field :no_sk %></div> 
+			<div id="clear"></div> 
+			<div id="form-label">Akreditasi</div> 
+			<div id="form-input"><%= f.select :akreditasi, Course::AKREDITASI.to_a.collect { |id,nama| [nama, id] } %></div> 
+			<div id="clear"></div>
+	</fieldset>		
+	<fieldset> 
+		<legend>Telp, Email dan Faksmili</legend> 
+			<div id="form-label">No Telp</div> 
+			<div id="form-input"><%= f.text_field :no_telp %></div> 
+			<div id="clear"></div> 
+			<div id="form-label">Email</div> 
+			<div id="form-input"><%= f.text_field :email %></div> 
+			<div id="clear"></div> 
+			<div id="form-label">Faksmili</div> 
+			<div id="form-input"><%= f.text_field :faksmili %></div> 
+			<div id="clear"></div> 
+	</fieldset>
+	</div> 
+	<div id="actions"> 
+		<%= f.submit "Input Program Studi"%>
+	</div> 
+<% end %>
+

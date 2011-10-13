@@ -1,0 +1,29 @@
+<div id="title">Daftar Berita</div>
+
+<div class="actions"><%= link_to 'Tambah Berita', new_information_path %></div>
+
+<table id="table-2">
+	<tr>
+		<th>No</th>
+		<th>Tanggal</th>
+		<th>Judul</th>
+		<th>Deskripsi</th>
+		<th>Status</th>
+		<th width="80">Aksi</th>
+	</tr>
+	<% count = 0; @information.each do |information| %>
+	<tr>
+		<td><%= count += 1 %></td>
+		<td><%= information.created_at %></td>
+		<td><%= information.judul %></td>
+		<td><%= truncate(information.berita, length: 80) %></td>
+		<td align="center"><%= information.status %></td>
+		<td id="aksi">
+			<%= link_to 'Edit', edit_information_path(information) %>
+			<%= link_to 'Delete', information, confirm: 'Apakah anda yakin?', method: :delete %>
+		</td>
+	</tr>
+	<% end %>
+</table>
+
+<div id="page"></div>

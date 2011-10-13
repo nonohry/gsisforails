@@ -1,0 +1,113 @@
+<%= form_for(@student) do |f| %>
+	<%= render 'shared/error_explanation', model: @student %>
+
+ 	<div id="form"> 
+		<fieldset> 
+			<legend>Data Umum</legend>
+				<div id="form-label"><%= f.label :nim %></div> 
+				<div id="form-input"><%= f.text_field :nim %></div> 
+				<div id="clear"></div>
+				<div id="form-label">Nama Depan</div> 
+				<div id="form-input"><%= f.text_field :nama_depan %></div> 
+				<div id="clear"></div>
+				<div id="form-label">Nama Belakang</div> 
+				<div id="form-input"><%= f.text_field :nama_belakang %></div> 
+				<div id="clear"></div>
+				<div id="form-label">Tempat Lahir</div> 
+				<div id="form-input"><%= f.text_field :tempat_lahir %></div> 
+				<div id="clear"></div>
+				<div id="form-label">Tanggal Lahir</div> 
+				<div id="form-input"><%= f.date_select :tanggal_lahir, start_year: Time.now.year - 40, end_year: Time.now.year - 15 %></div> 
+				<div id="clear"></div>
+				<div id="form-label">Agama</div> 
+				<div id="form-input"><%= f.select :religion_id, options_from_collection_for_select(Religion.all, :id, :nama) %></div> 
+				<div id="clear"></div>
+				<div id="form-label">Jenis Kelamin</div> 
+				<div id="form-input"><%= f.select :gender_id, options_from_collection_for_select(Gender.all, :id, :nama) %></div> 
+				<div id="clear"></div>
+		</fieldset>
+		<fieldset> 
+			<legend>Data Akademik</legend>
+				<div id="form-label">Tahun Angkatan</div> 
+				<div id="form-input"><%= f.text_field :tahun_masuk %></div> 
+				<div id="clear"></div>
+				<div id="form-label">Perguruan Tinggi</div> 
+				<div id="form-input"><%= f.select :college_id, options_from_collection_for_select(College.all, :id, :nama) %></div> 
+				<div id="clear"></div>
+				<div id="form-label">Program Studi</div> 
+				<div id="form-input"><%= f.select :course_id, options_from_collection_for_select(Course.all, :id, :nama) %></div> 
+				<div id="clear"></div>
+		</fieldset>
+		<fieldset> 
+			<legend>Orang Tua</legend>
+				<fieldset> 
+					<legend>Ayah</legend>
+						<div id="form-label">Nama</div> 
+						<div id="form-input"><%= f.text_field :ayah_nama %></div> 
+						<div id="clear"></div>
+						<div id="form-label">Pekerjaan</div> 
+						<div id="form-input"><%= f.text_field :ayah_pekerjaan %></div> 
+						<div id="clear"></div>
+						<div id="form-label">Golongan</div> 
+						<div id="form-input"><%= f.text_field :ayah_golongan %></div> 
+						<div id="clear"></div>
+				</fieldset>
+				<fieldset> 
+					<legend>Ibu</legend>
+						<div id="form-label">Nama</div> 
+						<div id="form-input"><%= f.text_field :ibu_nama %></div> 
+						<div id="clear"></div>
+						<div id="form-label">Pekerjaan</div> 
+						<div id="form-input"><%= f.text_field :ibu_pekerjaan %></div> 
+						<div id="clear"></div>
+						<div id="form-label">Golongan</div> 
+						<div id="form-input"><%= f.text_field :ibu_golongan %></div> 
+						<div id="clear"></div>
+				</fieldset>
+		</fieldset>
+		<fieldset> 
+			<legend>Alamat Sekarang</legend>
+				<div id="form-label">Alamat</div> 
+				<div id="form-input"><%= f.text_area :alamat, rows: 6 %></div> 
+				<div id="clear"></div>
+				<div id="form-label">Kota</div> 
+				<div id="form-input"><%= f.text_field :kota %></div> 
+				<div id="clear"></div>
+		</fieldset>
+		<fieldset> 
+			<legend>Data Lulusan</legend>
+				<div id="form-label">Tahun Lulus</div> 
+				<div id="form-input"><%= f.text_field :tahun_lulus %></div> 
+				<div id="clear"></div>
+				<div id="form-label">Lulusan</div> 
+				<div id="form-input"><%= f.text_field :lulusan %></div> 
+				<div id="clear"></div>
+				<div id="form-label">No. Ijazah</div> 
+				<div id="form-input"><%= f.text_field :no_ijazah %></div> 
+				<div id="clear"></div>
+				<div id="form-label">Alamat Sekolah</div> 
+				<div id="form-input"><%= f.text_area :alamat_sekolah, rows: 6 %></div> 
+				<div id="clear"></div>
+				<div id="form-label">NEM</div> 
+				<div id="form-input"><%= f.text_field :nem %></div> 
+				<div id="clear"></div>
+		</fieldset>
+		<% if new == 'new' %>
+		<fieldset>
+			<legend>Login Password</legend>
+				<div id="form-label">Password</div> 
+				<div id="form-input"><%= f.password_field :password %></div> 
+				<div id="clear"></div>
+				<div id="form-label">Konfirmasi Password</div> 
+				<div id="form-input"><%= f.password_field :password_confirmation %></div> 
+				<div id="clear"></div>
+		</fieldset>
+		<% end %>
+	</div> 
+	<div id="actions"> 
+		<%= f.submit "Input Mahasiswa"%>
+	</div> 
+<% end %>
+
+
+

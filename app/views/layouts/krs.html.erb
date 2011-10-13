@@ -1,0 +1,34 @@
+<html>
+<head>
+	<title><%= @mahasiswa.nama_lengkap %></title>
+	<style>
+		body {
+			font-family: Helvetica, Arial, sans-serif;
+		}
+		#table2{
+			width:21cm;
+		}
+		#table5{
+			border:1px solid black;
+			border-collapse:collapse;
+		}
+		#table5 tr{
+			border:1px solid black;
+			border-collapse:collapse;
+		}
+		#table5 td{
+			border:1px solid black;
+			border-collapse:collapse;
+			padding:3px 14px;
+		}
+		#table5 th{
+			border:1px solid black;
+			border-collapse:collapse;
+			padding:3px;
+		}
+	</style>
+</head>
+<body style="width:20cm;">
+	<%= yield %>
+</body>
+</html>

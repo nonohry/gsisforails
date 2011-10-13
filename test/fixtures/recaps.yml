@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  student: 
+  subject: 
+  smtMhs: MyString
+  tahun_akademik: MyString
+  semester: MyString
+  score: 
+  dosen: 
+
+two:
+  student: 
+  subject: 
+  smtMhs: MyString
+  tahun_akademik: MyString
+  semester: MyString
+  score: 
+  dosen: 

@@ -1,0 +1,42 @@
+<div id="title">Daftar Kuliah</div>
+
+<div class="actions">
+  <%= link_to 'Tambah Kuliah', new_teaching_path %>
+</div>
+
+<div id="ditemukan">
+  Ditemukan: <%= pluralize(Teaching.all.size, 'record') %>
+</div>
+
+<table id="table-2">
+  <tr>
+    <th width="2%">No.</th>
+		<th>Kode MK</th>
+		<th>Nama Mata Kuliah</th>
+    <th>NIP Dosen</th>
+    <th>Nama Dosen</th>
+		<th>Semester</th>
+
+    <th width="100">Aksi</th>
+  </tr>
+	<% count = 0 %>
+	<% @teachings.each do |teaching| %>
+  <tr>
+    <td id="table-no"><%= count += 1 %></td>
+    <td><%= teaching.subject.kode %></td>
+    <td><%= teaching.subject.nama %></td>
+    <td><%= teaching.dosen.nip %></td>
+		<td><%= teaching.dosen.nama %></td>
+		<td><%= teaching.semester %></td>
+    <td>
+			<%= link_to 'Edit', edit_teaching_path(teaching) %> |
+			<%= link_to 'Destroy', teaching, confirm: 'Apakah anda yakin?', method: :delete %>
+		</td>
+  </tr>
+	<% end %>
+
+  
+</table>
+
+<%= paginate @teachings %>
+

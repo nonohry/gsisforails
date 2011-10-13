@@ -1,0 +1,32 @@
+<div class="spacer">Mata Kuliah yang telah di ambil di Semester <b><%= @smtMhs %></b></div>
+<br>
+	<table id="table-1" class="spacer">
+	<tr>
+		<th>No. </th>
+		<th>Kode Mata Kuliah</th>
+		<th>Nama Mata Kuliah</th>
+		<th>SKS</th>
+		<th>Nilai</th>
+	</tr>
+	<% counter = 0 %>
+	<% krs.each do |card_plan| %>
+	<tr>
+		<td><%= counter += 1 %></td>
+		<td><%= card_plan.teaching.subject.kode %></td>
+		<td><%= card_plan.teaching.subject.nama %></td>
+		<td align="center"><%= card_plan.teaching.sks %></td>
+		<td align="center"><%= card_plan.nilai_lambang || 'x' %></td>
+	</tr>
+	<% end %>
+		<tr>
+			<td colspan="3" align="center"><b>Total SKS diambil</b></td>
+			<% z = 0; krs.each { |n| z+= n.teaching.sks } %>
+			<td colspan="2" align="center"><b><%= z %> SKS</b></td>	
+		</tr>
+		<tr>
+			<td colspan="3" align="center"><b>Total Nilai Semester 1</b></td>
+			<td colspan="2" align="center"><b><%= krs.sum('result')	%></tr>
+		<tr>
+			<td colspan="5" align="left"><b>Keterangan</b><br>X = Belum ada nilai<br>T = Tunda</td>
+		</tr>
+</table>

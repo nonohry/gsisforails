@@ -1,0 +1,12 @@
+<div class="grid_4">&nbsp;</div>
+<div id="form-login" class="grid_6" style="margin-top:10px">
+<%= form_tag pupils_path do %>
+	<div id="form-label">NIM</div>
+  <div id="form-input-depan"><%= text_field_tag :nim %></div>
+  <div id="clean"></div>
+  <div id="form-label">Password</div>
+  <div id="form-input-depan"><%= password_field_tag :password %></div>
+  <div id="clean"></div>
+  <div id="button-login"><%= submit_tag 'Login'%></div>
+<% end %>	
+</div>

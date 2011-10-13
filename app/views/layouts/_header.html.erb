@@ -1,0 +1,13 @@
+<div id="head-left-title">
+	SISTEM INFORMASI AKADEMIK KAMPUS
+</div>
+<div id="clear">
+</div>
+<div id="head-left">
+	<%= nama_kampus %>
+</div>
+<div id="head-right">
+	<%= Time.now.strftime("%A, %d %B %Y") %> <%= link_to('= Logout =', logout_path) if current_admin %>
+</div>
+<div id="clear">
+</div>

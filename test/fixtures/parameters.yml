@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  nama_kasubagakademik: MyString
+  nama_direktur: MyString
+  kode_pts: MyString
+  nama_pts: MyString
+  tahun_akademik: MyString
+  semester: MyString
+
+two:
+  nama_kasubagakademik: MyString
+  nama_direktur: MyString
+  kode_pts: MyString
+  nama_pts: MyString
+  tahun_akademik: MyString
+  semester: MyString

@@ -1,0 +1,33 @@
+<div id="form">
+	<%= form_for @parameter do |f| %>
+		<fieldset>
+		<legend>Data Akademik</legend>
+
+			<div id="form-label">Perguruan Tinggi</div>
+			<div id="form-input"><%= f.select :college_id, options_from_collection_for_select(College.all, :id, :nama) %></div>
+			<div id="clear"></div>
+			<div id="form-label">Prodi</div>
+			<div id="form-input" style="width:auto;"><%= f.select :course_id, options_from_collection_for_select(Course.all, :id, :nama) %></div>
+			<div id="loader2_" style="padding:5px 1px 1px 1px;float:left;"></div>
+			<div id="clear"></div>
+	
+		</fieldset>
+		<fieldset>
+			<legend>Data Umum</legend>
+				<div id="form-label">Tahun Ajaran</div>
+				<div id="form-input"><%= f.select :tahun_ajaran, options_for_select(year_collect(Parameter::YEAR)) %></div>
+				<div id="clear"></div>
+				<div id="form-label">Semester</div>
+				<div id="form-input"><%= f.collection_select :semester, Parameter.semester_nama_options, :first, :last %></div>
+				<div id="clear"></div>
+				<div id="form-label">Tanggal Mulai</div>
+				<div id="form-input"><%= f.date_select :tanggal_mulai %></div>
+				<div id="clear"></div>
+				<div id="form-label">Tanggal Selesai</div>
+				<div id="form-input"><%= f.date_select :tanggal_selesai %></div>
+				<div id="clear"></div>
+		</fieldset>
+
+		<div class="actions"><%= f.submit 'Input Batas Waktu'%></div>
+	<% end %>
+</div>

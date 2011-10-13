@@ -1,0 +1,38 @@
+<%= form_for(@teaching) do |f| %>
+  <%= render 'shared/error_explanation', model: @teaching %>
+
+ 	<div id="form"> 
+		<fieldset> 
+			<legend>Data Akademik</legend>
+				<div id="form-label">Program Studi</div> 
+				<div id="form-input"><%= f.select :course_id, options_from_collection_for_select(Course.all, :id, :nama) %></div> 
+				<div id="clear"></div>
+				<div id="form-label">Kelas</div> 
+				<div id="form-input"><%= f.select :group_id, options_from_collection_for_select(Group.all, :id, :nama) %></div> 
+				<div id="clear"></div>
+		</fieldset>
+		<fieldset> 
+			<legend>Mata Kuliah</legend> 
+				<div id="form-label">Kode Mata Kuliah</div> 
+				<div id="form-input"><%= f.select :subject_id,options_from_collection_for_select(Subject.all, :id, :nama), :prompt => true %></div> 
+				<div id="clear"></div> 
+				<div id="form-label">Semester</div> 
+				<div id="form-input"><%= f.text_field :semester %></div> 
+				<div id="clear"></div>
+				<div id="form-label">SKS</div> 
+				<div id="form-input"><%= f.text_field :sks %></div> 
+				<div id="clear"></div>
+		</fieldset>		
+		<fieldset> 
+			<legend>Dosen Pengampu</legend>
+			<div id="form-label">Nama Dosen</div> 
+			<div id="form-input"><%= f.select :dosen_id, options_from_collection_for_select(Dosen.all, :id, :nama), :prompt => true %></div> 
+			<div id="clear"></div>
+		</fieldset>
+	</div> 
+	<div id="actions"> 
+		<%= f.submit "Input Kuliah"%>
+	</div> 
+<% end %>
+
+

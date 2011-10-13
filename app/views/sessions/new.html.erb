@@ -1,0 +1,21 @@
+<%= form_tag sessions_path do %>
+<div id="form-login">
+	<div id="form-login-head">
+		<b style="color:#fff">ADMIN LOGIN</b><br>
+		<% if flash[:alert] %>
+			<b style="color: maroon">LOGIN GAGAL </b><b style="color:#fff"><%= flash[:alert] %></b>
+		<% end %>
+	</div>
+	<div id="form-login-">
+	<div id="form-label2">Username</div>
+	<div id="form-input1"><%= text_field_tag :username %></div>
+	<div id="clear"></div>
+	<div id="form-label2">Password</div>
+	<div id="form-input1"><%= password_field_tag :password %></div>
+	<div id="clear"></div>
+	<div id="form-label2">&nbsp;</div>
+	<div id="form-input1"><%= submit_tag "Log in" %></div>
+	<div id="clear"></div>
+	</div>	
+</div>
+<% end %>

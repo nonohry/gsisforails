@@ -1,0 +1,10 @@
+<div id="title-mhs">Kartu Hasil Studi</div>
+
+<b>Semester Aktif: <%= semester_aktif %></b><br><br>
+
+
+<% unless @khs == [] %>
+	<%= render 'daftar_khs', card_plans: @khs %>
+<% else %>
+	<p>Tidak ada mata kuliah yang diambil semester ini</p>
+<% end %>

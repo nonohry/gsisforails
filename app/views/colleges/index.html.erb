@@ -1,0 +1,38 @@
+<div id="title">Daftar Perguruan Tinggi</div>
+
+<div class="actions">
+  <%= link_to 'Tambah Perguruan Tinggi', new_college_path %>
+</div>
+
+<div id="ditemukan">
+  Ditemukan: <%= pluralize(@colleges.size, 'record') %>
+</div>
+
+<table id="table-2">
+  <tr>
+    <th width="2%">No.</th>
+    <th>Nama Yayasan</th>
+    <th>Kode Universitas</th>
+    <th>Nama Universitas</th>
+    <th>No telp</th>
+
+    <th width="100">Aksi</th>
+  </tr>
+	<% @colleges.each do |college| %>
+  <tr>
+    <td id="table-no">1</td>
+    <td><%= college.foundation.nama %></td>
+    <td><%= college.kode %></td>
+    <td><%= college.nama %></td>
+		<td><%= college.no_telp %></td>
+    <td>
+			<%= link_to 'Edit', edit_college_path(college) %> | 
+			<%= link_to 'Destroy', college, confirm: 'Apakah anda yakin?', method: :delete %>
+		</td>
+  </tr>
+	<% end %>
+
+  
+</table>
+
+<%= paginate @colleges %>

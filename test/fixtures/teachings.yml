@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  dosen: 
+  subject: 
+  group: 
+  tahun_akademik: MyString
+  semester: MyString
+  sks_teori: MyString
+  sks_praktek: MyString
+  sks: MyString
+
+two:
+  dosen: 
+  subject: 
+  group: 
+  tahun_akademik: MyString
+  semester: MyString
+  sks_teori: MyString
+  sks_praktek: MyString
+  sks: MyString

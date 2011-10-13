@@ -1,0 +1,30 @@
+<fieldset>
+	<legend>Pencarian</legend>
+		<div id="col1">
+			<%= form_for @search, :url => results_path do |f| %>	
+					
+					
+				<div id="label-3"><%= f.label :teaching_id_equals, "Mata Kuliah" %></div>
+				<div id="label-4" style="width:auto;"><%= f.select :teaching_id_equals, Teaching.all.collect { |c| [c.subject.nama, c.id]}, prompt: true %></div>
+				<div id="clear"></div>
+				
+		</div>
+		
+		<div id="col2">
+			<div id="label-3"><%= f.label :tahun_akademik_equals, "Tahun Akademik" %></div>
+			<div id="label-4" style="width:auto;"><%= f.select :tahun_akademik_equals, options_for_select(year_collect(Parameter::YEAR)), prompt: "Silahkan" %></div>
+			<div id="clear"></div>
+			<div id="label-3"><%= f.label :semester_equals, "Semester" %></div>
+			<div id="label-4" style="width:auto;"><%= f.select :semester_equals, options_for_select(CardPlan::SEMESTER), prompt: "Silahkan" %></div>
+			<div id="clear"></div>
+		</div>
+	
+			
+		
+</fieldset>	
+		<div id="form-submit" style="float:left;">
+			<%= f.submit "Cari Mata Kuliah"%>
+		</div>
+		<div id="total">Ditemukan <%= pluralize(@card_plans.size, 'record') %></div>
+		<div id="clear"></div>
+		<% end %>

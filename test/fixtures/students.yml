@@ -1,0 +1,53 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  nim: MyString
+  nama_depan: MyString
+  nama_belakang: MyString
+  tempat_lahir: MyString
+  tanggal_lahir: 2011-09-20
+  religion: 
+  gender: 
+  tahun_masuk: MyString
+  college: 
+  courses: 
+  guide: 
+  ayah_nama: MyString
+  ayah_pekerjaan: MyString
+  ayah_golongan: MyString
+  ibu_nama: MyString
+  ibu_pekerjaan: MyString
+  ibu_golongan: MyString
+  alamat: MyText
+  kota: MyString
+  tahun_lulus: MyString
+  lulusan: MyString
+  no_ijazah: MyString
+  alamat_sekolah: MyText
+  nem: MyString
+
+two:
+  nim: MyString
+  nama_depan: MyString
+  nama_belakang: MyString
+  tempat_lahir: MyString
+  tanggal_lahir: 2011-09-20
+  religion: 
+  gender: 
+  tahun_masuk: MyString
+  college: 
+  courses: 
+  guide: 
+  ayah_nama: MyString
+  ayah_pekerjaan: MyString
+  ayah_golongan: MyString
+  ibu_nama: MyString
+  ibu_pekerjaan: MyString
+  ibu_golongan: MyString
+  alamat: MyText
+  kota: MyString
+  tahun_lulus: MyString
+  lulusan: MyString
+  no_ijazah: MyString
+  alamat_sekolah: MyText
+  nem: MyString

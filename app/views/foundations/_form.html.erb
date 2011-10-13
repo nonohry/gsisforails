@@ -1,0 +1,65 @@
+<%= form_for(@foundation) do |f| %>
+  <% if @foundation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@foundation.errors.count, "error") %> prohibited this foundation from being saved:</h2>
+
+      <ul>
+      <% @foundation.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+ 	<div id="form"> 
+	<fieldset> 
+		<legend>Data Umum</legend> 
+			<div id="form-label">Kode Yayasan</div> 
+			<div id="form-input"><%= f.text_field :kode %></div> 
+			<div id="clear"></div> 
+			<div id="form-label">Nama Yayasan</div> 
+			<div id="form-input"><%= f.text_field :nama %></div> 
+			<div id="clear"></div> 
+			<div id="form-label">Nama Ketua Yayasan</div> 
+			<div id="form-input"><%= f.text_field :ketua %></div> 
+			<div id="clear"></div> 
+			<div id="form-label">No SK</div> 
+			<div id="form-input"><%= f.text_field :no_sk %></div> 
+			<div id="clear"></div> 
+	</fieldset>	
+	<fieldset> 
+		<legend>Alamat</legend> 
+			<div id="form-label">Alamat 1</div> 
+			<div id="form-input"><%= f.text_area :alamat_1, :rows => 5 %></div> 
+			<div id="clear"></div> 
+			<div id="form-label">Alamat 2</div> 
+			<div id="form-input"><%= f.text_area :alamat_2, :rows => 5 %></div> 
+			<div id="clear"></div> 
+			<div id="form-label">Kota</div> 
+			<div id="form-input"><%= f.text_field :kota %></div> 
+			<div id="clear"></div> 
+			<div id="form-label">Kodepos</div> 
+			<div id="form-input"><%= f.text_field :kodepos, :maxlength => 5, :size => 5 %></div> 
+			<div id="clear"></div> 
+			<div id="form-label">No Telp</div> 
+			<div id="form-input"><%= f.text_field :no_telp, :maxlength => 20, :size => 20 %></div> 
+			<div id="clear"></div> 
+	</fieldset>	
+	<fieldset> 
+		<legend>Website, Email dan Faksmili</legend> 
+			<div id="form-label">Website</div> 
+			<div id="form-input"><%= f.text_field :website %></div> 
+			<div id="clear"></div> 
+			<div id="form-label">Email</div> 
+			<div id="form-input"><%= f.text_field :email %></div> 
+			<div id="clear"></div> 
+			<div id="form-label">Faksmili</div> 
+			<div id="form-input"><%= f.text_field :faksmili %></div> 
+			<div id="clear"></div> 
+	</fieldset>
+	</div> 
+	<div class="actions"> 
+		<%= f.submit "Input Yayasan"%>
+	</div> 
+<% end %>

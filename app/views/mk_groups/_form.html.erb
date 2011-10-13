@@ -1,0 +1,33 @@
+<%= form_for(@mk_group) do |f| %>
+  <% if @mk_group.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@mk_group.errors.count, "error") %> prohibited this mk_group from being saved:</h2>
+
+      <ul>
+      <% @mk_group.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+ 	<div id="form"> 
+		<fieldset> 
+			<legend>Data Akademik</legend>
+			<div id="form-label">Kode KMK</div> 
+			<div id="form-input"><%= f.text_field :kode %></div> 
+			<div id="clear"></div>
+			<div id="form-label">Nama KMK</div> 
+			<div id="form-input"><%= f.text_field :nama %></div> 
+			<div id="clear"></div>
+			<div id="form-label">Deskripsi</div> 
+			<div id="form-input"><%= f.text_area :keterangan, rows: 6 %></div> 
+			<div id="clear"></div>
+		</fieldset>
+
+	</div> 
+	<div id="actions"> 
+		<%= f.submit "Input KMK"%>
+	</div> 
+<% end %>

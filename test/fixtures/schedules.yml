@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  hari: MyString
+  jam: MyString
+  room: 
+
+two:
+  hari: MyString
+  jam: MyString
+  room: 

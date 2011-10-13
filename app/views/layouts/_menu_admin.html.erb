@@ -1,0 +1,62 @@
+<div id="menu">
+	<div id="menu-header-1">
+		 Selamat Datang admin<br>
+		<%= link_to 'Home', home_url %>
+		<%= link_to 'Logout', logout_path %>
+	</div>
+	<div id="menu-header">Data Personalia
+	</div>
+	<div id="menu-content">
+		<div id="menu_">
+			<%= link_to 'Mahasiswa', students_path %>
+		</div>
+		<div id="menu_">
+			<%= link_to 'Dosen', dosens_path %>
+		</div>
+	</div>
+	<div id="menu-header">Kuliah</div>
+	<div id="menu-content">
+		<div id="menu_">
+			<%= link_to 'Mata Kuliah', subjects_path %>
+		</div>
+		<div id="menu_">
+			<%= link_to 'Daftar Kuliah', teachings_path %>
+		</div>
+	</div>
+	<div id="menu-header">Nilai</div>
+	<div id="menu-content">
+		<div id="menu_">
+			<%= link_to 'Nilai', results_path %>
+		</div>
+	</div>
+	<div id="menu-header">Data Akademik</div>
+	<div id="menu-content">
+		<div id="menu_">
+			<%= link_to 'Yayasan', foundations_path %>
+		</div>
+		<div id="menu_">
+			<%= link_to 'Perguruan Tinggi', colleges_path %>
+		</div>
+		<div id="menu_">
+			<%= link_to 'Program Studi', courses_path %>
+		</div>
+	</div>
+	<div id="menu-header">Setting</div>
+	<div id="menu-content">
+		<div id="menu_">
+			<a href="#" id="a_menu">Pengguna</a>
+		</div>
+		<div id="menu_">
+			<%= link_to 'Batas Waktu KRS', parameters_path %>
+		</div>
+		<div id="menu_">
+			<%= link_to 'Ruangan', rooms_path %>
+		</div>
+	</div>
+	<div id="menu-header">Berita</div>
+		<div id="menu-content">
+			<div id="menu_">
+				<%= link_to 'Daftar Berita', information_index_path %>
+			</div>
+		</div>
+</div>

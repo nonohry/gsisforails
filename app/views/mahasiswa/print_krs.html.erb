@@ -1,0 +1,103 @@
+<table id="table2" width="100%" align="center" cellpadding="0" cellspacing="0">
+	<tr>
+  	<td rowspan="2" align="left" ><%= image_tag('ylpp.jpg', size: '70x70') %></td>
+	</tr>
+	<tr>
+  	<td colspan="6" align="center" width='100'><font size="4"><strong><%= nama_kampus %></strong><br /><%= alamat_kampus %></font></td>
+	</tr>
+
+	<tr>
+  	<td colspan="7" align="center"><hr noshade size="2"></td>
+	</tr>
+	<tr>
+   	<td colspan="7" align="center"><h2>KRS (Kartu Rencana Studi)</h2></td>
+	</tr>
+
+	<tr>
+		<td width="100">Nama</td>
+		<td width="24" align="center">:</td>
+		<td width="430"><%= @mahasiswa.nama_lengkap %></td>
+		<td colspan='2' width='40'>Semester</td>
+		<td width="20" align="center">:</td>
+		<td width="70"><%= @smtMhs %></td>
+		<td width="70"><%= @smt %></td>
+	</tr>
+	<tr>
+		<td width="100">NIM</td>
+		<td width="24" align="center">:</td>
+		<td><%= @mahasiswa.nim %></td>
+
+	</tr>
+	<tr>
+		<td width="110">PRODI/JENJANG</td>
+		<td align="center">:</td>
+		<td><%= "#{@mahasiswa.course.nama}/ #{@mahasiswa.course.jenjang}" %></td>
+		<td colspan="4">&nbsp;</td>
+	</tr>
+	<tr>
+		<td colspan="7">&nbsp;</td>
+	</tr>
+	<tr>
+		<td colspan="7">
+		<table id="table5" width="100%" border="1" cellpadding="0" cellspacing="0">
+		<tr>
+			<th width="4">NO</th>
+			<th>KODE MK</th>
+			<th>NAMA MATA KULIAH</th>
+			<th>DOSEN PENGAMPU</th>
+			<th width="10">SKS</th>
+		</tr>
+		<% count = 0 %>
+		<% @krs.each do |krs| %>
+		<tr>
+			<td align="center"><%= count += 1 %></td>
+			<td><%= krs.teaching.subject.kode %></td>
+			<td><%= krs.teaching.subject.nama %></td>
+			<td><%= krs.teaching.dosen.nama %></td>
+			<td align="center"><%= krs.teaching.sks %></td>
+		<tr>
+		<% end %>
+			<tr>
+			<td style="padding:3px 3px;" colspan="4"><b>Total SKS</b></td>
+			<% z = 0; @krs.each { |n| z += n.teaching.sks } %>
+			<td align="center"><%= z %></td>
+		</tr>
+		</table>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="7">&nbsp;</td>
+	</tr>
+	<tr>
+		<td colspan="7">
+		<table width="100%" cellpadding="0" cellspacing="0">
+		<tr>
+			<td width="30%" align="center">Mahasiswa</td>
+			<td width="30%" align="center">Mengetahui<br></td>
+				<td width="30%" align="center">Pembantu Direktur-I</td>
+		</tr>
+		<tr>
+			<td colspan="3">&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="3">&nbsp;</td>
+		</tr>
+		<tr>
+			<td align="center"><%= @mahasiswa.nama_lengkap %></td>
+			<td align="center"></td>
+			<td align="center">ARTATHI EKA SURYANDARI, SSiT</td>
+		</tr>
+		<tr>
+			<td colspan="3">&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="3" align='center'><font size='0.5em'>Dokumen ini diproses secara elektronik (E-DOCUMENT) dianggap sah setelah ada tanda tangan dan stempel</font></td>
+		</tr>
+		</table>
+		</td>
+	</tr>
+</table>
+
+
+
+

@@ -1,0 +1,20 @@
+<!DOCTYPE html">
+<html>
+<head>
+	<title>gSiakad : Sistem Informasi Akademik Kampus</title>
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+	<%= stylesheet_link_tag    "application" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<%= render 'layouts/nojs' %>
+	<div id="header-main">
+		<%= render 'layouts/header' %>
+	</div>
+	<div id="main">
+		<%= yield %>
+	</div>
+	<%= render 'layouts/footer'%>
+</body>
+</html>

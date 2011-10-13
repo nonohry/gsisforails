@@ -1,0 +1,104 @@
+<%= form_tag action: 'simpan_biodata' do %>
+
+ 	<div id="form"> 
+		<fieldset> 
+			<legend>Data Umum</legend>
+				<%= hidden_field_tag 'id', f.id %>
+				<div id="form-label">NIM </div> 
+				<div id="form-input"><%= text_field :mahasiswa, :nim %></div> 
+				<div id="clear"></div>
+				<div id="form-label">Nama Depan</div> 
+				<div id="form-input"><%= text_field :mahasiswa, :nama_depan %></div> 
+				<div id="clear"></div>
+				<div id="form-label">Nama Belakang</div> 
+				<div id="form-input"><%= text_field :mahasiswa, :nama_belakang %></div> 
+				<div id="clear"></div>
+				<div id="form-label">Tempat Lahir</div> 
+				<div id="form-input"><%= text_field :mahasiswa, :tempat_lahir %></div> 
+				<div id="clear"></div>
+				<div id="form-label">Tanggal Lahir</div> 
+				<div id="form-input"><%= date_select :mahasiswa, :tanggal_lahir, {start_year: Time.now.year - 40, end_year: Time.now.year - 15} %></div> 
+				<div id="clear"></div>
+				<div id="form-label">Agama</div> 
+				<div id="form-input"><%= collection_select(:mahasiswa, :religion_id, Religion.all, :id, :nama) %></div> 
+				<div id="clear"></div>
+				<div id="form-label">Jenis Kelamin</div> 
+				<div id="form-input"><%= collection_select(:mahasiswa, :gender_id, Gender.all, :id, :nama) %></div> 
+				<div id="clear"></div>
+		</fieldset>
+		<fieldset> 
+			<legend>Data Akademik</legend>
+				<div id="form-label">Tahun Angkatan</div> 
+				<div id="form-input"><%= text_field_tag :tahun_masuk %></div> 
+				<div id="clear"></div>
+				<div id="form-label">Perguruan Tinggi</div> 
+				<div id="form-input"><%= collection_select(:mahasiswa, :college_id, College.all, :id, :nama) %></div> 
+				<div id="clear"></div>
+				<div id="form-label">Program Studi</div> 
+				<div id="form-input"><%= collection_select(:mahasiswa, :course_id, Course.all, :id, :nama) %></div> 
+				<div id="clear"></div>
+		</fieldset>
+		<fieldset> 
+			<legend>Orang Tua</legend>
+				<fieldset> 
+					<legend>Ayah</legend>
+						<div id="form-label">Nama</div> 
+						<div id="form-input"><%= text_field :mahasiswa, :ayah_nama %></div> 
+						<div id="clear"></div>
+						<div id="form-label">Pekerjaan</div> 
+						<div id="form-input"><%= text_field :mahasiswa, :ayah_pekerjaan %></div> 
+						<div id="clear"></div>
+						<div id="form-label">Golongan</div> 
+						<div id="form-input"><%= text_field :mahasiswa, :ayah_golongan %></div> 
+						<div id="clear"></div>
+				</fieldset>
+				<fieldset> 
+					<legend>Ibu</legend>
+						<div id="form-label">Nama</div> 
+						<div id="form-input"><%= text_field :mahasiswa, :ibu_nama %></div> 
+						<div id="clear"></div>
+						<div id="form-label">Pekerjaan</div> 
+						<div id="form-input"><%= text_field :mahasiswa, :ibu_pekerjaan %></div> 
+						<div id="clear"></div>
+						<div id="form-label">Golongan</div> 
+						<div id="form-input"><%= text_field :mahasiswa, :ibu_golongan %></div> 
+						<div id="clear"></div>
+				</fieldset>
+		</fieldset>
+		<fieldset> 
+			<legend>Alamat Sekarang</legend>
+				<div id="form-label">Alamat</div> 
+				<div id="form-input"><%= text_area :mahasiswa, :alamat, rows: 6 %></div> 
+				<div id="clear"></div>
+				<div id="form-label">Kota</div> 
+				<div id="form-input"><%= text_field :mahasiswa, :kota %></div> 
+				<div id="clear"></div>
+		</fieldset>
+		<fieldset> 
+			<legend>Data Lulusan</legend>
+				<div id="form-label">Tahun Lulus</div> 
+				<div id="form-input"><%= text_field :mahasiswa, :tahun_lulus %></div> 
+				<div id="clear"></div>
+				<div id="form-label">Lulusan</div> 
+				<div id="form-input"><%= text_field :mahasiswa, :lulusan %></div> 
+				<div id="clear"></div>
+				<div id="form-label">No. Ijazah</div> 
+				<div id="form-input"><%= text_field :mahasiswa, :no_ijazah %></div> 
+				<div id="clear"></div>
+				<div id="form-label">Alamat Sekolah</div> 
+				<div id="form-input"><%= text_area :mahasiswa, :alamat_sekolah, rows: 6 %></div> 
+				<div id="clear"></div>
+				<div id="form-label">NEM</div> 
+				<div id="form-input"><%= text_field :mahasiswa, :nem %></div> 
+				<div id="clear"></div>
+		</fieldset>
+	</div> 
+	<div id="actions"> 
+		<%= submit_tag "Simpan Mahasiswa", class: 'button blue' %>
+	</div> 
+<% end %>
+
+
+
+
+

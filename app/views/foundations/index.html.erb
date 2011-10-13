@@ -1,0 +1,40 @@
+<div id="title">Daftar Yayasan</div>
+
+	<div class="actions">
+  	<%= link_to 'Tambah Yayasan', new_foundation_path %>
+	</div>
+
+
+<div id="ditemukan">
+  Ditemukan: <%= pluralize(@foundations.size, 'record') %>
+</div>
+
+<table id="table-2">
+  <tr>
+    <th width="2%">No.</th>
+    <th>Kode</th>
+    <th>Nama</th>
+    <th>Ketua</th>
+    <th>No SK</th>  
+    <th>No telp</th>
+
+    <th width="100">Aksi</th>
+  </tr>
+	<% @foundations.each do |foundation| %>
+  <tr>
+    <td id="table-no">1</td>
+    <td><%= foundation.kode %></td>
+    <td><%= foundation.nama %></td>
+    <td><%= foundation.ketua %></td>
+		<td><%= foundation.no_sk %></td>
+		<td><%= foundation.no_telp %></td>
+    <td>
+			<%= link_to 'Edit', edit_foundation_path(foundation) %> | 
+			<%= link_to 'Destroy', foundation, confirm: 'Apakah anda yakin?', method: :delete %>
+		</td>
+  </tr>
+	<% end %>
+  
+</table>
+
+<%= paginate @foundations %>

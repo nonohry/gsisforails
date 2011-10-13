@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  nip: MyString
+  nama: MyString
+  gelar_depan: MyString
+  gelar_belakang: MyString
+  position: 
+  status: 
+  tanggal_lahir: MyString
+  tempat_lahir: MyString
+  religion: 
+  gender: 
+  alamat: MyText
+  no_telp: MyString
+  email: MyString
+
+two:
+  nip: MyString
+  nama: MyString
+  gelar_depan: MyString
+  gelar_belakang: MyString
+  position: 
+  status: 
+  tanggal_lahir: MyString
+  tempat_lahir: MyString
+  religion: 
+  gender: 
+  alamat: MyText
+  no_telp: MyString
+  email: MyString

@@ -1,0 +1,45 @@
+<div style="float:left;">
+	<div style="float:left;margin:0px 0px 0px 4px;">
+		<%= form_tag mahasiswa_print_khs_path, target: '_blank' do %>
+			<%= hidden_field_tag 'id', @mahasiswa.id %>
+			<%= submit_tag 'Print KHS' %>&nbsp;&nbsp; 
+		<% end %>
+	</div>
+	<div id="clear"></div>
+</div>
+
+<br>
+<br>
+
+<div ="title-sks">Mata Kuliah yang telah di ambil di Semester <b>1</b></div>
+
+<br>
+
+<div id="warning">Keterangan:<br>X = Nilai belum ada</div>
+
+<br>
+
+	<table id="table-1">
+		<tr>
+			<th>No. </th>
+			<th>Kode Mata Kuliah</th>
+			<th>Nama Mata Kuliah</th>
+			<th>SKS</th>
+			<th>Nilai</th>
+		</tr>
+		<% counter = 0 %>
+		<% card_plans.each do |khs| %>
+		<tr>
+			<td><%= counter += 1 %></td>
+			<td><%= khs.teaching.subject.kode %></td>
+			<td><%= khs.teaching.subject.nama %></td>
+			<td align="center"><%= khs.teaching.sks %></td>
+			<td align="center"><%= khs.nilai_lambang || 'x' %></td>
+		</tr>
+		<% end %>
+	</table>
+	
+<br />
+<% z = 0; card_plans.each { |n| z+= n.teaching.sks } %>
+<div id="total_sks">Total <b><%= z %> SKS<b></div>
+<div id="total-nilai">Total Nilai : </div>

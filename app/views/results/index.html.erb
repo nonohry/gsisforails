@@ -1,0 +1,53 @@
+<div id="title">Nilai</div>
+<br>
+
+
+	<div id="form">
+		<%= render 'search' %>
+	</div>
+<div style="margin:4px 0px;"></div>
+<div id="form">
+	<%= form_tag insert_results_path do %>
+		<table width="100%" id="table-2">	
+			<tr>
+		    <th rowspan='2'>No. </th>
+				<th rowspan='2'>NIM</th>
+				<th rowspan='2'>Nama</th>
+				<th rowspan='2'>Mata Kuliah</th>
+				<th colspan='5'>Nilai</th>
+		  </tr>
+		  <tr>
+		    <td>A</td>
+		    <td>B</td>
+		    <td>C</td>
+		    <td>D</td>
+		    <td>E</td>
+		  </tr>
+			<% counter = 0 %>
+			<% @card_plans.each do |krs| %>
+			
+		  <tr>
+		    <td><%= counter += 1 %></td>
+				<td><%= krs.student.nim %></td>
+				<td><%= krs.student.nama_lengkap %></td>
+				<td><%= krs.teaching.subject.nama %></td>
+				<% [4,3,2,1,0].each do |f| %>
+					<% 
+						if f == krs.result 
+							chk="checked='checked'"
+						else
+							chk=""
+						end
+					%>
+					
+					<td><input type='radio' <%= chk %> name="card_plan[<%= krs.id %>]" value="<%= f %>"</td>
+				<% end %>
+		  </tr>
+			<% end %>
+		</table>
+		
+		<div id="form-submit">
+			<%= submit_tag 'Masukkan nilai'%>
+		</div>
+	<% end %>
+</div>

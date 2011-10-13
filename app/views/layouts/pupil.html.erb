@@ -1,0 +1,30 @@
+<!DOCTYPE html">
+<html>
+<head>
+	<title>gSiakad : Sistem Informasi Akademik Kampus</title>
+		<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+		<link rel="stylesheet" type="text/css" href="/stylesheets/reset.css" />
+		<link rel="stylesheet" type="text/css" href="/stylesheets/text.css" />
+		<link rel="stylesheet" type="text/css" href="/stylesheets/960.css" />
+
+		
+		<link rel="stylesheet"type="text/css"  href="/stylesheets/sisfo_mahasiswa.css" />
+</head>
+<body>
+	<% if current_student %>
+		<%= render 'layouts/nojs'%>
+		<%= render 'layouts/pupil/header' %>
+		<%= render 'layouts/pupil/menu' %>
+	<% else %>
+	 <%= render 'layouts/pupil/header_login' %>
+	<% end %> 
+	<br />
+	<div id="back-blue" class="container_12">
+		<%= yield %>
+		<div class="clear"></div>
+		<%= render 'layouts/pupil/footer' %>
+		<div class="clear"></div>
+	</div>
+
+</body>
+</html>
