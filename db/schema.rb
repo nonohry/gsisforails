@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110927071439) do
+ActiveRecord::Schema.define(:version => 20110928144405) do
 
   create_table "actives", :force => true do |t|
     t.string   "nama"
@@ -30,15 +30,13 @@ ActiveRecord::Schema.define(:version => 20110927071439) do
     t.integer  "student_id"
     t.integer  "teaching_id"
     t.string   "smtMhs"
-    t.string   "statusMK"
     t.string   "tahun_akademik"
     t.string   "semester"
-    t.integer  "score_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "result"
   end
 
-  add_index "card_plans", ["score_id"], :name => "index_card_plans_on_score_id"
   add_index "card_plans", ["student_id"], :name => "index_card_plans_on_student_id"
   add_index "card_plans", ["teaching_id"], :name => "index_card_plans_on_teaching_id"
 
@@ -139,6 +137,14 @@ ActiveRecord::Schema.define(:version => 20110927071439) do
     t.string   "judul"
     t.text     "berita"
     t.string   "status"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "mk_groups", :force => true do |t|
+    t.string   "kode"
+    t.string   "nama"
+    t.text     "keterangan"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -262,23 +268,23 @@ ActiveRecord::Schema.define(:version => 20110927071439) do
     t.integer  "course_id"
     t.string   "kode"
     t.string   "nama"
-    t.string   "semester"
-    t.string   "sks"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "mk_group_id"
   end
 
   add_index "subjects", ["course_id"], :name => "index_subjects_on_course_id"
+  add_index "subjects", ["mk_group_id"], :name => "index_subjects_on_mk_group_id"
 
   create_table "teachings", :force => true do |t|
     t.integer  "dosen_id"
     t.integer  "subject_id"
     t.integer  "group_id"
-    t.string   "tahun_akademik"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "course_id"
     t.string   "semester"
+    t.integer  "sks"
   end
 
   add_index "teachings", ["course_id"], :name => "index_teachings_on_course_id"

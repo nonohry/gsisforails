@@ -21,4 +21,4 @@ Religion.create([{nama: 'Islam'}, {nama: 'Kristen'}, {nama: 'Protestan'}, {nama:
 Group.create([{nama: 'Pagi'}, {nama: 'Sore'}])
 Score.create([{kode: 4, nama: 'A', deskripsi: 'Sangat Baik'}, {kode: 3, nama: 'B', deskripsi: 'Baik'}, {kode: 2, nama: 'C', deskripsi: 'Cukup'}, {kode: 1, nama: 'D', deskripsi: 'Kurang / Tidak Lulus'}, {kode: 0, nama: 'E', deskripsi: 'Tidak Lulus'}])
 Active.create([{nama: 'Aktif'}, {nama: 'Cuti'}, {nama: 'DO / Putus Studi'}, {nama: 'Keluar'}, {nama: 'Lulus'}, {nama: 'Non Aktif'}])
-AdminUser.create([{userame: 'gopanx', password: 'kilerjo'}])
+AdminUser.create([{username: 'gopanx', password: 'kilerjo'}])
